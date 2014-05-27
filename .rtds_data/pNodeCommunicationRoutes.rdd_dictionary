@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcs">
+<Signal id="SIG1" name="sNoRoute">
+<SendSymbols>
+<SymbolReference symbolId="SYMB53"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG2" name="sRemoveRoute">
+<InputSymbols>
+<SymbolReference symbolId="SYMB31"/>
+<SymbolReference symbolId="SYMB48"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG3" name="sAddRoute">
+<InputSymbols>
+<SymbolReference symbolId="SYMB44"/>
+<SymbolReference symbolId="SYMB36"/>
+<SymbolReference symbolId="SYMB41"/>
+</InputSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="pNodeCommunicationRoutes" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<SentSignals>
+<SignalReference id="SIG1"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+</ReceivedSignals>
+<Transitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB41"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB44"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB48"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB31"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB36"/>
+</Transition>
+</Transitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="NoRoute" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB45"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB47"/>
+<SymbolReference symbolId="SYMB45"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="OneRoute" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB35"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB35"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="MultipleRoutes" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB30"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB30"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

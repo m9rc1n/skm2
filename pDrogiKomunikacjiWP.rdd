@@ -2,7 +2,7 @@
 
 <!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
 
-<Diagram language="sdl" type="prcs" name="pNodeCommunicationRoutes" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
+<Diagram language="sdl" type="prcs" name="pDrogiKomunikacjiWP" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
 <DiagramPartition name="Part. 0" nbPagesH="3" nbPagesV="2">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
@@ -76,7 +76,7 @@
 <Text>routes := routes + 1</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB47" type="sdlState" xCenter="484" yCenter="44" fixedDimensions="TRUE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB47" type="sdlState" xCenter="385" yCenter="55" fixedDimensions="TRUE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>NoRoute</Text>
 </Symbol>
@@ -185,17 +185,17 @@
 
 </Link>
 
-<Link linkId="LINK119" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK123" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB37" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB47" type="sdlarrow" isOutside="TRUE" side="y" position="0.5" endType="arrow">
+<Connector attachedSymbolId="SYMB47" type="sdlarrow" isOutside="TRUE" side="y" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="231"/>
+<LinkSegment orientation="h" length="132"/>
 
 </Link>
 
