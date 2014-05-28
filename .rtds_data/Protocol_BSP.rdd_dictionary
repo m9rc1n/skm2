@@ -9,12 +9,12 @@
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM2" type="process" name="pMechanizmBadaniaTopologii" parentId="ITEM1" scope="none" minInstances="2.4">
+<Item id="ITEM2" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="2.8">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB14"/>
+<SymbolReference symbolId="SYMB20"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB14"/>
+<SymbolReference symbolId="SYMB20"/>
 </UsingSymbols>
 </Item>
 <Item id="ITEM3" type="process" name="pDrogiKomunikacjiWP" parentId="ITEM1" scope="none" minInstances="2.5">
@@ -25,7 +25,15 @@
 <SymbolReference symbolId="SYMB9"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM4" type="process" name="pWB" parentId="ITEM1" scope="none" minInstances="2.6">
+<Item id="ITEM4" type="process" name="pOczekiwanieNaEcho" parentId="ITEM1" scope="none" minInstances="2.9">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB24"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB24"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="process" name="pWB" parentId="ITEM1" scope="none" minInstances="2.6">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB8"/>
 </DefiningSymbols>
@@ -33,12 +41,12 @@
 <SymbolReference symbolId="SYMB8"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM5" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="2.8">
+<Item id="ITEM6" type="process" name="pMechanizmBadaniaTopologii" parentId="ITEM1" scope="none" minInstances="2.4">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB20"/>
+<SymbolReference symbolId="SYMB14"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB20"/>
+<SymbolReference symbolId="SYMB14"/>
 </UsingSymbols>
 </Item>
 </DictionaryObjects>

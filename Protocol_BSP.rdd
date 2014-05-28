@@ -39,7 +39,8 @@ SIGNAL sLastOnRoute;
 SIGNAL sNoEchoDown;
 SIGNAL sDown;
 SIGNAL sEchoDetected;
-SIGNAL sNoEchoUp;</Text>
+SIGNAL sNoEchoUp;
+SIGNAL sEcho</Text>
 </Symbol>
 </Symbol>
 </DiagramPartition>
@@ -66,6 +67,11 @@ SIGNAL sNoEchoUp;</Text>
 <Symbol symbolId="SYMB20" type="sdlPrcs" xCenter="286" yCenter="308" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pPojedynczaDrogaDowolnegoWezlaWP(2.8)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB24" type="sdlPrcs" xCenter="110" yCenter="165" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pOczekiwanieNaEcho(2.9)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB8" type="sdlPrcs" xCenter="308" yCenter="132" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcs">
+<Signal id="SIG1" name="T">
+<InputSymbols>
+<SymbolReference symbolId="SYMB100"/>
+<SymbolReference symbolId="SYMB103"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="none">
+<InputSymbols>
+<SymbolReference symbolId="SYMB16"/>
+<SymbolReference symbolId="SYMB17"/>
+<SymbolReference symbolId="SYMB11"/>
+<SymbolReference symbolId="SYMB4"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG3" name="sEchoDetected">
+<SendSymbols>
+<SymbolReference symbolId="SYMB9"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG4" name="sEcho">
+<InputSymbols>
+<SymbolReference symbolId="SYMB8"/>
+<SymbolReference symbolId="SYMB102"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG5" name="sReciverLastOnRoute">
+<InputSymbols>
+<SymbolReference symbolId="SYMB15"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG6" name="sNoEchoDown">
+<SendSymbols>
+<SymbolReference symbolId="SYMB263"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG7" name="sMessage">
+<SendSymbols>
+<SymbolReference symbolId="SYMB14"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG8" name="sNoEchoUp">
+<SendSymbols>
+<SymbolReference symbolId="SYMB262"/>
+</SendSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="pOczekiwanieNaEcho" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<SentSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG7"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+</ReceivedSignals>
+<Transitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM7"/>
+<SymbolReference symbolId="SYMB17"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM6"/>
+<SymbolReference symbolId="SYMB100"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM6"/>
+<SymbolReference symbolId="SYMB15"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM6"/>
+<SymbolReference symbolId="SYMB8"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB102"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB16"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM5"/>
+<SymbolReference symbolId="SYMB4"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB103"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB11"/>
+</Transition>
+</Transitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="WaitsForSecondEcho" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="EchoDetected" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="NoEchoUp" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB13"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB13"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="SendWithEcho" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="state" name="WaitsForFirstEcho" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="state" name="NoEchoDown" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB12"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB12"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>
