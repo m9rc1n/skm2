@@ -151,6 +151,13 @@
 <Text>OnePath</Text>
 </Symbol>
 
+<Symbol symbolId="SYMB43" type="sdlText" xCenter="880" yCenter="44" fixedDimensions="TRUE" width="176" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>DCL
+
+  paths INTEGER := 0;</Text>
+</Symbol>
+
 <Symbol symbolId="SYMB5" type="sdlState" xCenter="231" yCenter="781" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>MultiplePaths</Text>

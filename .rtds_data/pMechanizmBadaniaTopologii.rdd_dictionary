@@ -3,18 +3,18 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sTopologyProbing">
+<Signal id="SIG1" name="sNoRoute">
+<InputSymbols>
+<SymbolReference symbolId="SYMB17"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="sTopologyProbing">
 <SendSymbols>
 <SymbolReference symbolId="SYMB16"/>
 <SymbolReference symbolId="SYMB12"/>
 </SendSymbols>
 <InputSymbols>
 <SymbolReference symbolId="SYMB10"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG2" name="sNoRoute">
-<InputSymbols>
-<SymbolReference symbolId="SYMB17"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG3" name="sMultipleRoutes">
@@ -28,7 +28,7 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
@@ -37,21 +37,29 @@
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB17"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB10"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB11"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
-<SymbolReference symbolId="SYMB17"/>
+<SymbolReference symbolId="SYMB19"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="state" name="TopologyProbed" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="state" name="FoundRoutes" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB18"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB18"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="TopologyProbed" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB14"/>
 </DefiningSymbols>
@@ -59,7 +67,7 @@
 <SymbolReference symbolId="SYMB14"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM3" type="state" name="TopologyNotProbed" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="state" name="TopologyNotProbed" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB13"/>
 </DefiningSymbols>

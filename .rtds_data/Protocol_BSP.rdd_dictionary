@@ -3,50 +3,207 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="sys">
+<Signal id="SIG1" name="sTopologyNotProbed">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG10" name="sNoEchoUp">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG11" name="sRemoveRoute">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG12" name="sExternalCommunication">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG13" name="sDown">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG14" name="sRouteUpdated">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG15" name="sExternalCommunicationError">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG16" name="sNoEchoDown">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG17" name="sEcho">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG18" name="sAliasDefinition">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG19" name="sSendWithEcho">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG2" name="sNotLastOnRoute">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG20" name="sPathBlocked">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG21" name="sEmergencyTrigger">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG22" name="sUpdateFirmware">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG23" name="sData">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG24" name="sRouteRemoved">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG25" name="sConfirmation">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG26" name="sNewAliases">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG27" name="sEchoDetected">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG28" name="sTopologyProbing">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG29" name="sLastOnRoute">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG3" name="sFirmwarePart">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG30" name="sNoNewAliases">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG4" name="sMultipleRoutes">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG5" name="sMissingFirmwarePart">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG6" name="sNoExternalCommunication">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG7" name="sRouteAdded">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG8" name="sNoRoute">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
+<Signal id="SIG9" name="sAddRoute">
+<DeclarationSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DeclarationSymbols>
+</Signal>
 <Item id="ITEM1" type="system" name="Protocol_BSP" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB2"/>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK131" isFrom="TRUE"/>
+<Connections>
+<Connection name="cExternalCommunication"/>
+</Connections>
+</SignalWindow>
+<Channel name="cExternalCommunication" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW1"/>
+<Channel name="cFirstCommunication" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW2"/>
 </Item>
-<Item id="ITEM2" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="2.8">
+<Item id="ITEM2" type="block" name="bBlokWezlaBrzegowego" parentId="ITEM1" scope="none" minInstances="0" maxInstances="5">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB20"/>
+<SymbolReference symbolId="SYMB40"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB20"/>
+<SymbolReference symbolId="SYMB40"/>
 </UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK131" isFrom="FALSE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK142" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG12"/>
+</SentSignals>
+</SignalWindow>
 </Item>
-<Item id="ITEM3" type="process" name="pDrogiKomunikacjiWP" parentId="ITEM1" scope="none" minInstances="2.5">
+<Item id="ITEM3" type="block" name="bBlokWezlaPomiarowego" parentId="ITEM1" scope="none" minInstances="0" maxInstances="100">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB9"/>
+<SymbolReference symbolId="SYMB42"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB9"/>
+<SymbolReference symbolId="SYMB42"/>
 </UsingSymbols>
+<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK142" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
 </Item>
-<Item id="ITEM4" type="process" name="pOczekiwanieNaEcho" parentId="ITEM1" scope="none" minInstances="2.9">
+<Item id="ITEM4" type="process" name="pOczekiwanieNaEcho" parentId="ITEM1" scope="none" minInstances="1">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB24"/>
 </DefiningSymbols>
 <UsingSymbols>
 <SymbolReference symbolId="SYMB24"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM5" type="process" name="pWB" parentId="ITEM1" scope="none" minInstances="2.6">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB8"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB8"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM6" type="process" name="pMechanizmBadaniaTopologii" parentId="ITEM1" scope="none" minInstances="2.4">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB14"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB14"/>
 </UsingSymbols>
 </Item>
 </DictionaryObjects>
