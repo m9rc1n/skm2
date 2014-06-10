@@ -3,9 +3,9 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sNoRoute">
+<Signal id="SIG1" name="sMultipleRoutes">
 <InputSymbols>
-<SymbolReference symbolId="SYMB17"/>
+<SymbolReference symbolId="SYMB11"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG2" name="sTopologyProbing">
@@ -17,9 +17,9 @@
 <SymbolReference symbolId="SYMB10"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG3" name="sMultipleRoutes">
+<Signal id="SIG3" name="sNoRoute">
 <InputSymbols>
-<SymbolReference symbolId="SYMB11"/>
+<SymbolReference symbolId="SYMB17"/>
 </InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process" name="pMechanizmBadaniaTopologii" scope="current">
@@ -37,16 +37,20 @@
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
-<SymbolReference symbolId="SYMB17"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB10"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB17"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM2"/>
 <SymbolReference symbolId="SYMB19"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB11"/>
 </Transition>
 </Transitions>
 </Body>
