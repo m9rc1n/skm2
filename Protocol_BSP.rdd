@@ -54,11 +54,6 @@ SIGNAL sEcho;</Text>
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB24" type="sdlPrcs" xCenter="858" yCenter="66" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>pOczekiwanieNaEcho</Text>
-</Symbol>
-
 <Symbol symbolId="SYMB40" type="sdlBlk" xCenter="121" yCenter="165" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>bBlokWezlaBrzegowego

@@ -198,12 +198,4 @@
 </ReceivedSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM4" type="process" name="pOczekiwanieNaEcho" parentId="ITEM1" scope="none" minInstances="1">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB24"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB24"/>
-</UsingSymbols>
-</Item>
 </DictionaryObjects>
