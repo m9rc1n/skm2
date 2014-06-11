@@ -158,14 +158,15 @@
 <SymbolReference symbolId="SYMB2"/>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW4" insideDiagram="TRUE">
+<SignalWindow id="SIGWDW6" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK131" isFrom="TRUE"/>
 <Connections>
 <Connection name="cExternalCommunication"/>
 </Connections>
 </SignalWindow>
-<Channel name="cExternalCommunication" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW1"/>
-<Channel name="cFirstCommunication" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW2"/>
+<Channel name="cExternalCommunication" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW1"/>
+<Channel name="cGeneralCommunication" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW2"/>
+<Channel name="cNodeSelf" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW5"/>
 </Item>
 <Item id="ITEM2" type="block" name="bBlokWezlaBrzegowego" parentId="ITEM1" scope="none" minInstances="0" maxInstances="5">
 <DefiningSymbols>
@@ -191,6 +192,24 @@
 <UsingSymbols>
 <SymbolReference symbolId="SYMB42"/>
 </UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK143" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG28"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG28"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW5" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK143" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG28"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG28"/>
+</ReceivedSignals>
+</SignalWindow>
 <SignalWindow id="SIGWDW3" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK142" isFrom="TRUE"/>
 <ReceivedSignals>

@@ -82,7 +82,7 @@ SIGNAL sEcho;</Text>
 </Link>
 
 <Link linkId="LINK142" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cFirstCommunication</Text>
+<Text>cGeneralCommunication</Text>
 <Connector attachedSymbolId="SYMB42" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[sExternalCommunication]</Text>
 <Text id="2"></Text>
@@ -92,6 +92,23 @@ SIGNAL sEcho;</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="-605"/>
+
+</Link>
+
+<Link linkId="LINK143" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNodeSelf</Text>
+<Connector attachedSymbolId="SYMB42" type="chnl" isOutside="TRUE" side="x" position="0.125" endType="midarrow">
+<Text id="1">[sTopologyProbing]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB42" type="chnl" isOutside="TRUE" side="y" position="-0.272727272727" endType="midarrow">
+<Text id="1">[sTopologyProbing]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="87"/>
+<LinkSegment orientation="h" length="141"/>
+<LinkSegment orientation="v" length="-93"/>
+<LinkSegment orientation="h" length="-152"/>
 
 </Link>
 </DiagramPartition>
