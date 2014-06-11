@@ -168,7 +168,7 @@
 <Channel name="cGeneralCommunication" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW2"/>
 <Channel name="cNodeSelf" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW5"/>
 </Item>
-<Item id="ITEM2" type="block" name="bBlokWezlaBrzegowego" parentId="ITEM1" scope="none" minInstances="0" maxInstances="5">
+<Item id="ITEM2" type="block" name="bBlokWezlaBrzegowego" parentId="ITEM1" scope="none" minInstances="3" maxInstances="10">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB40"/>
 </DefiningSymbols>
@@ -185,7 +185,7 @@
 </SentSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM3" type="block" name="bBlokWezlaPomiarowego" parentId="ITEM1" scope="none" minInstances="0" maxInstances="100">
+<Item id="ITEM3" type="block" name="bBlokWezlaPomiarowego" parentId="ITEM1" scope="none" minInstances="10" maxInstances="100">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB42"/>
 </DefiningSymbols>

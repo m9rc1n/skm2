@@ -1,0 +1,11 @@
+## Semaphores: <name> <number>
+
+## Processes: <name> <number> <function> <min inst> <max inst> <priority>
+PROCESS	pPojedynczaDrogaDowolnegoWezlaWP	1	pPojedynczaDrogaDowolnegoWezlaWP	0	100	-
+PROCESS	pMechanizmBadaniaTopologii	2	pMechanizmBadaniaTopologii	1	-	-
+PROCESS	pDrogiKomunikacjiWP	3	pDrogiKomunikacjiWP	1	-	-
+PROCESS	RTDS_Env	4	RTDS_Env	1	1	-
+PROCESS	pWezelBrzegowy	5	pWezelBrzegowy	1	-	-
+
+## Messages: <name> <number> <parameter type>
+

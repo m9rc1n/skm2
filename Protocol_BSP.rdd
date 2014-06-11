@@ -57,13 +57,13 @@ SIGNAL sEcho;</Text>
 <Symbol symbolId="SYMB40" type="sdlBlk" xCenter="121" yCenter="165" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>bBlokWezlaBrzegowego
-(0, 5)</Text>
+(3, 10)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB42" type="sdlBlk" xCenter="726" yCenter="165" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>bBlokWezlaPomiarowego
-(0, 100)</Text>
+(10, 100)</Text>
 </Symbol>
 </Symbol>
 

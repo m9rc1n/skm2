@@ -96,9 +96,9 @@
 <Text>sRouteUpdated</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB28" type="sdlDecision" xCenter="264" yCenter="1045" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB28" type="sdlDecision" xCenter="264" yCenter="1045" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>path &gt; 1</Text>
+<Text>paths &gt; 1</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB29" type="sdlSendSig" xCenter="88" yCenter="1089" fixedDimensions="TRUE" width="154" height="44" color="#000000" fillColor="#ffffff">

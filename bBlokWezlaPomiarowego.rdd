@@ -14,7 +14,7 @@
 <Symbol symbolId="SYMB11" type="sdlPrcs" xCenter="396" yCenter="407" fixedDimensions="TRUE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pPojedynczaDrogaDowolnegoWezlaWP
-(0, 100)</Text>
+(10, 10)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="495" yCenter="220" fixedDimensions="TRUE" width="220" height="44" color="#000000" fillColor="#ffffff">
