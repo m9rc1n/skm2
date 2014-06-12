@@ -2,7 +2,7 @@
 
 <!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
 
-<Diagram language="sdl" type="blk" name="bBlokWezlaPomiarowego" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+<Diagram language="sdl-rt" type="blk" name="bBlokWezlaPomiarowego" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
 <DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
@@ -11,10 +11,9 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB11" type="sdlPrcs" xCenter="396" yCenter="407" fixedDimensions="TRUE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="sdlPrcs" xCenter="396" yCenter="407" fixedDimensions="TRUE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pPojedynczaDrogaDowolnegoWezlaWP
-(10, 10)</Text>
+<Text>pPojedynczaDrogaDowolnegoWezlaWP(10, 10)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="495" yCenter="220" fixedDimensions="TRUE" width="220" height="44" color="#000000" fillColor="#ffffff">
@@ -22,15 +21,15 @@
 <Text>pMechanizmBadaniaTopologii</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlPrcs" xCenter="891" yCenter="407" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB4" type="sdlPrcs" xCenter="891" yCenter="407" fixedDimensions="TRUE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pDrogiKomunikacjiWP</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK201" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK0" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>---</Text>
-<Connector attachedSymbolId="SYMB11" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[sExternalCommunication]</Text>
 <Text id="2"></Text>
 </Connector>
@@ -42,15 +41,15 @@
 
 </Link>
 
-<Link linkId="LINK196" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK1" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cSelfSingleRoute</Text>
-<Connector attachedSymbolId="SYMB11" type="chnl" isOutside="TRUE" side="x" position="-0.75" endType="midarrow">
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.75" endType="midarrow">
 <Text id="1">[sRouteUpdated,
 sRouteRemoved,
 sRouteAdded]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB11" type="chnl" isOutside="TRUE" side="x" position="0.75" endType="midarrow">
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.75" endType="midarrow">
 <Text id="1">[sRouteUpdated,
 sRouteRemoved,
 sRouteAdded]</Text>
@@ -62,9 +61,9 @@ sRouteAdded]</Text>
 
 </Link>
 
-<Link linkId="LINK200" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK4" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cDealWithRoute</Text>
-<Connector attachedSymbolId="SYMB11" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
@@ -77,13 +76,13 @@ sAddRoute]</Text>
 
 </Link>
 
-<Link linkId="LINK202" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK3" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>---</Text>
 <Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB11" type="chnl" isOutside="TRUE" side="x" position="-0.75" endType="midarrow">
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="-0.75" endType="midarrow">
 <Text id="1">[sTopologyProbing]</Text>
 <Text id="2"></Text>
 </Connector>
@@ -92,7 +91,7 @@ sAddRoute]</Text>
 
 </Link>
 
-<Link linkId="LINK194" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK2" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cRoutesState</Text>
 <Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.147727272727" endType="midarrow">
 <Text id="1">[]</Text>

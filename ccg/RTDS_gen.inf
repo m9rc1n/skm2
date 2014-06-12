@@ -1,7 +1,7 @@
 ## Semaphores: <name> <number>
 
 ## Processes: <name> <number> <function> <min inst> <max inst> <priority>
-PROCESS	pPojedynczaDrogaDowolnegoWezlaWP	1	pPojedynczaDrogaDowolnegoWezlaWP	0	100	-
+PROCESS	pPojedynczaDrogaDowolnegoWezlaWP	1	pPojedynczaDrogaDowolnegoWezlaWP	10	10	-
 PROCESS	pMechanizmBadaniaTopologii	2	pMechanizmBadaniaTopologii	1	-	-
 PROCESS	pDrogiKomunikacjiWP	3	pDrogiKomunikacjiWP	1	-	-
 PROCESS	RTDS_Env	4	RTDS_Env	1	1	-

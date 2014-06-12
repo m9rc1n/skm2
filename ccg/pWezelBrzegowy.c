@@ -35,14 +35,12 @@ RTDS_TASK_ENTRY_POINT(pWezelBrzegowy)
   short RTDS_transitionExecuted;
   int RTDS_savedSdlState = 0;
 
-
+  int i;
+  void * RTDS_myLocals[1];
+  void ** RTDS_localsStack[1];
   RTDS_MSG_DATA_DECL
 
-  void ** RTDS_myLocals;
-  void ** RTDS_localsStack[1];
 
-
-  #include "pWezelBrzegowy_tempVars.h"
 
   /* ***************************************************************** */
   /* $(RTDS_HOME)/share/ccg/windows/bricks/RTDS_Process_begin.c begins */
@@ -63,12 +61,18 @@ RTDS_TASK_ENTRY_POINT(pWezelBrzegowy)
   /* *************************************************************** */
 
 
-  RTDS_myLocals = NULL;
-  RTDS_localsStack[0] = RTDS_myLocals;
 
 
   /* Initial transition */
-  RTDS_SDL_STATE_SET(RTDS_state_NoExternalCommunication);
+  do	/* Dummy do/while(0) to be able to do 'break's */
+    {
+    RTDS_myLocals[0] = (void*)&i;
+    RTDS_localsStack[0] = RTDS_myLocals;
+    RTDS_start_label:
+    RTDS_SET_TIMER(RTDS_message_t, (0 + 1) * 100);
+    RTDS_SDL_STATE_SET(RTDS_state_NoExternalCommunication);
+    break;
+    } while (0);
 
   /* ****************************************************************** */
   /* $(RTDS_HOME)/share/ccg/windows/bricks/RTDS_Proc_loopStart.c begins */
@@ -154,10 +158,13 @@ RTDS_TASK_ENTRY_POINT(pWezelBrzegowy)
         case RTDS_state_NoExternalCommunication:
           switch(RTDS_currentContext->currentMessage->messageNumber)
             {
-            /* Transition for state NoExternalCommunication - message * */
-            default:
+            /* Transition for state NoExternalCommunication - message t */
+            case RTDS_message_t:
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sExternalCommunication, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
               RTDS_SDL_STATE_SET(RTDS_state_ExternalCommunication);
+              break;
+            default:
+              RTDS_transitionExecuted = 0;
               break;
             } /* End of switch on message */
           break;

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl-rt" diagramType="blk">
+<Signal id="SIG1" name="sExternalCommunication">
+</Signal>
+<Item id="ITEM1" type="block" name="bBlokWezlaBrzegowego" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW2" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK0" isFrom="FALSE"/>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+</ReceivedSignals>
+</SignalWindow>
+<Channel name="---" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW2"/>
+</Item>
+<Item id="ITEM2" type="process" name="pWezelBrzegowy" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK0" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+</SentSignals>
+</SignalWindow>
+</Item>
+</DictionaryObjects>

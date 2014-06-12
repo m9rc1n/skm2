@@ -36,13 +36,11 @@ RTDS_TASK_ENTRY_POINT(pDrogiKomunikacjiWP)
   int RTDS_savedSdlState = 0;
 
   int routes = 0;
-  RTDS_MSG_DATA_DECL
-
   void * RTDS_myLocals[1];
   void ** RTDS_localsStack[1];
+  RTDS_MSG_DATA_DECL
 
 
-  #include "pDrogiKomunikacjiWP_tempVars.h"
 
   /* ***************************************************************** */
   /* $(RTDS_HOME)/share/ccg/windows/bricks/RTDS_Process_begin.c begins */
@@ -63,12 +61,17 @@ RTDS_TASK_ENTRY_POINT(pDrogiKomunikacjiWP)
   /* *************************************************************** */
 
 
-  RTDS_myLocals[0] = (void*)&routes;
-  RTDS_localsStack[0] = RTDS_myLocals;
 
 
   /* Initial transition */
-  RTDS_SDL_STATE_SET(RTDS_state_NoRoute);
+  do	/* Dummy do/while(0) to be able to do 'break's */
+    {
+    RTDS_myLocals[0] = (void*)&routes;
+    RTDS_localsStack[0] = RTDS_myLocals;
+    RTDS_start_label:
+    RTDS_SDL_STATE_SET(RTDS_state_NoRoute);
+    break;
+    } while (0);
 
   /* ****************************************************************** */
   /* $(RTDS_HOME)/share/ccg/windows/bricks/RTDS_Proc_loopStart.c begins */
@@ -150,6 +153,35 @@ RTDS_TASK_ENTRY_POINT(pDrogiKomunikacjiWP)
       RTDS_transitionExecuted = 1;
       switch(RTDS_currentContext->sdlState)
         {
+        /* Transitions for state MultipleRoutes */
+        case RTDS_state_MultipleRoutes:
+          switch(RTDS_currentContext->currentMessage->messageNumber)
+            {
+            /* Transition for state MultipleRoutes - message sRemoveRoute */
+            case RTDS_message_sRemoveRoute:
+              routes = routes - 1;
+              if ( (RTDS_BOOLEAN)(routes > 1) )
+                {
+                RTDS_SDL_STATE_SET(RTDS_state_MultipleRoutes);
+                break;
+                }
+              RTDS_SDL_STATE_SET(RTDS_state_OneRoute);
+              break;
+            /* Transition for state MultipleRoutes - message sAddRoute */
+            case RTDS_message_sAddRoute:
+              routes = routes + 1;
+              if ( (RTDS_BOOLEAN)(routes > 1) )
+                {
+                RTDS_SDL_STATE_SET(RTDS_state_MultipleRoutes);
+                break;
+                }
+              RTDS_SDL_STATE_SET(RTDS_state_OneRoute);
+              break;
+            default:
+              RTDS_transitionExecuted = 0;
+              break;
+            } /* End of switch on message */
+          break;
         /* Transitions for state OneRoute */
         case RTDS_state_OneRoute:
           switch(RTDS_currentContext->currentMessage->messageNumber)
@@ -165,35 +197,6 @@ RTDS_TASK_ENTRY_POINT(pDrogiKomunikacjiWP)
               routes = routes + 1;
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sMultipleRoutes, 0, NULL, "pMechanizmBadaniaTopologii", RTDS_process_pMechanizmBadaniaTopologii);
               RTDS_SDL_STATE_SET(RTDS_state_MultipleRoutes);
-              break;
-            default:
-              RTDS_transitionExecuted = 0;
-              break;
-            } /* End of switch on message */
-          break;
-        /* Transitions for state MultipleRoutes */
-        case RTDS_state_MultipleRoutes:
-          switch(RTDS_currentContext->currentMessage->messageNumber)
-            {
-            /* Transition for state MultipleRoutes - message sAddRoute */
-            case RTDS_message_sAddRoute:
-              routes = routes + 1;
-              if ( (RTDS_BOOLEAN)(routes > 1) )
-                {
-                RTDS_SDL_STATE_SET(RTDS_state_MultipleRoutes);
-                break;
-                }
-              RTDS_SDL_STATE_SET(RTDS_state_OneRoute);
-              break;
-            /* Transition for state MultipleRoutes - message sRemoveRoute */
-            case RTDS_message_sRemoveRoute:
-              routes = routes - 1;
-              if ( (RTDS_BOOLEAN)(routes > 1) )
-                {
-                RTDS_SDL_STATE_SET(RTDS_state_MultipleRoutes);
-                break;
-                }
-              RTDS_SDL_STATE_SET(RTDS_state_OneRoute);
               break;
             default:
               RTDS_transitionExecuted = 0;
