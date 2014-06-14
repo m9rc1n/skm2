@@ -11,7 +11,7 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlState" xCenter="231" yCenter="418" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlState" xCenter="231" yCenter="495" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>ExternalCommunication</Text>
 </Symbol>
@@ -21,10 +21,9 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB237" type="sdlText" xCenter="473" yCenter="55" fixedDimensions="FALSE" width="132" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB237" type="sdlText" xCenter="429" yCenter="44" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>TIMER t;
-DCL i INTEGER;</Text>
+<Text>TIMER t;</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB238" type="sdlState" xCenter="231" yCenter="176" fixedDimensions="TRUE" width="198" height="44" color="#000000" fillColor="#ffffff">
@@ -42,7 +41,12 @@ DCL i INTEGER;</Text>
 <Text>t</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB250" type="sdlSendSig" xCenter="231" yCenter="330" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB250" type="sdlSendSig" xCenter="231" yCenter="407" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sExternalCommunication</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB251" type="sdlSendSig" xCenter="231" yCenter="330" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sExternalCommunication</Text>
 </Symbol>
@@ -62,7 +66,7 @@ DCL i INTEGER;</Text>
 
 </Link>
 
-<Link linkId="LINK178" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK186" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB238" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -90,13 +94,13 @@ DCL i INTEGER;</Text>
 
 </Link>
 
-<Link linkId="LINK177" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK215" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB249" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB250" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB251" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -104,7 +108,7 @@ DCL i INTEGER;</Text>
 
 </Link>
 
-<Link linkId="LINK174" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK207" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB250" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -115,6 +119,20 @@ DCL i INTEGER;</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="88"/>
+
+</Link>
+
+<Link linkId="LINK216" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB251" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB250" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 </DiagramPartition>

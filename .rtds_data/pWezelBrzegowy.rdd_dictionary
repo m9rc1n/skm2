@@ -10,6 +10,7 @@
 </Signal>
 <Signal id="SIG2" name="sExternalCommunication">
 <SendSymbols>
+<SymbolReference symbolId="SYMB251"/>
 <SymbolReference symbolId="SYMB250"/>
 </SendSymbols>
 </Signal>
@@ -19,41 +20,36 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG2"/>
 <SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM5"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB249"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="variable" name="i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB237"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM3" type="state" name="ExternalCommunication" parentId="ITEM1" scope="none">
-<UsingSymbols>
-<SymbolReference symbolId="SYMB10"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM4" type="timer" name="t" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="timer" name="t" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB248"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="state" name="NoExternalCommunication" parentId="ITEM1" scope="none">
+<Item id="ITEM3" type="state" name="NoExternalCommunication" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB238"/>
 </DefiningSymbols>
 <UsingSymbols>
 <SymbolReference symbolId="SYMB238"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="ExternalCommunication" parentId="ITEM1" scope="none">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB10"/>
 </UsingSymbols>
 </Item>
 </DictionaryObjects>

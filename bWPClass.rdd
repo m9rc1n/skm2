@@ -11,23 +11,42 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="1002" yCenter="321" fixedDimensions="TRUE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="1023" yCenter="495" fixedDimensions="TRUE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pDrogiKomunikacjiWP</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlPrcs" xCenter="474" yCenter="123" fixedDimensions="TRUE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB4" type="sdlPrcs" xCenter="429" yCenter="682" fixedDimensions="TRUE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pMechanizmBadaniaTopologii</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlPrcs" xCenter="474" yCenter="321" fixedDimensions="TRUE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlPrcs" xCenter="429" yCenter="374" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pPojedynczaDrogaDowolnegoWezlaWP</Text>
+<Text>pDecydujODrodze</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB9" type="sdlPrcs" xCenter="429" yCenter="495" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pPojedynczaDrogaDowolnegoWezlaWP (0, 100)</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK23" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK124" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="0.278709677419" endType="midarrow">
+<Text id="1">[(slRouteChanged)]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB9" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sRouteAdded]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="429"/>
+
+</Link>
+
+<Link linkId="LINK145" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cRoutesState</Text>
 <Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.125" endType="midarrow">
 <Text id="1">[]</Text>
@@ -38,51 +57,65 @@
 sMultipleRoutes]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="-198"/>
-<LinkSegment orientation="h" length="-539"/>
+<LinkSegment orientation="v" length="187"/>
+<LinkSegment orientation="h" length="-605"/>
 
 </Link>
 
-<Link linkId="LINK25" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>---</Text>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.1" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0833333333333" endType="midarrow">
-<Text id="1">[sTopologyProbing]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="198"/>
-
-</Link>
-
-<Link linkId="LINK22" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK116" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Connector attachedSymbolId="SYMB7" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[(slRouteChanged)]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.170322580645" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.0335483870968" endType="midarrow">
 <Text id="1">[(slRouteChanged)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
-<LinkSegment orientation="h" length="-484"/>
+<LinkSegment orientation="h" length="-440"/>
 
 </Link>
 
-<Link linkId="LINK24" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK121" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode2</Text>
+<Connector attachedSymbolId="SYMB7" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[(slRouteChanged)]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB9" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[(slRouteChanged)]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="121"/>
+
+</Link>
+
+<Link linkId="LINK146" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cDealWithRoute</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Connector attachedSymbolId="SYMB9" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sRemoveRoute,
-sAddRoute]</Text>
+<Text id="1">[sAddRoute,
+sRemoveRoute]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="528"/>
+<LinkSegment orientation="h" length="594"/>
+
+</Link>
+
+<Link linkId="LINK133" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cDealWithTopology</Text>
+<Connector attachedSymbolId="SYMB9" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sTopologyProbing]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="187"/>
 
 </Link>
 </DiagramPartition>

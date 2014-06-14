@@ -1,1 +1,9 @@
-€}q(UversionqU4.2.1qUobjectq]qu.
+€}q(UversionqU4.2.1qUobjectq]q(crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q(Utextq	U#pid_tab STRING ( Pid ) ENDNEWTYPE ;q
+U
+identifierqU0UtypeqUtypedeclqUchildrenq]q((hoq}q(h	Upid_tabqhU0hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h	h
+hU0hhhhhhubub(hoq}q(h	USTRING ( Pid )qhU1hU	gnrtrtypeqh]q((hoq}q(h	USTRINGqhU1hU	gnrtrnameq h]q!hhub(hoq"}q#(h	UPidq$hU1hU
+gnrtrparamq%h]q&(hoq'}q((h	UPidq)hU1hU	paramtypeq*h]q+(hoq,}q-(h	UPidq.hU1hUtypenameq/h]q0hh'ubahh"ubahhubehhubeh(hoq1}q2(h	U*NEWTYPE pid_tab
+  STRING (Pid)
+ENDNEWTYPE;q3hNhUdatadeclq4h]q5hahNububau.

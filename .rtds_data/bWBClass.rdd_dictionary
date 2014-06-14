@@ -14,8 +14,8 @@
 <SignalList id="LIST1" name="slRouteChanged">
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
-<SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
+<SignalReference id="SIG3"/>
 <DeclarationSymbols>
 </DeclarationSymbols>
 </SignalList>
@@ -24,7 +24,7 @@
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW4" gateName="gNode" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK20" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK22" isFrom="FALSE"/>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
 </ReceivedSignals>
@@ -33,7 +33,7 @@
 </SentSignalLists>
 </SignalWindow>
 <SignalWindow id="SIGWDW3" gateName="gExternal" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK19" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK21" isFrom="FALSE"/>
 </SignalWindow>
 <Channel name="cExternal" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW3"/>
 <Channel name="cNode" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW4"/>
@@ -46,10 +46,10 @@
 <SymbolReference symbolId="SYMB2"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW1" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK19" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK21" isFrom="TRUE"/>
 </SignalWindow>
 <SignalWindow id="SIGWDW2" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK20" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK22" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG1"/>
 </SentSignals>
