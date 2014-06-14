@@ -188,7 +188,7 @@ SIGNAL sEcho;</Text>
 
 </Link>
 
-<Link linkId="LINK427" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK441" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB45" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[sExternalCommunication]</Text>
@@ -216,7 +216,7 @@ SIGNAL sEcho;</Text>
 
 </Link>
 
-<Link linkId="LINK428" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK440" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB46" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
