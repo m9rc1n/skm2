@@ -1,16 +1,18 @@
-/* Project: c:\users\marcin\documents\github\skm2 - copy\protocol_bsp.rdp */
-/* Diagram: C:\Users\Marcin\Documents\GitHub\skm2 - Copy\Protocol_BSP.rdd */
+/* Project: c:\users\marcin\documents\github\skm2\protocol_bsp.rdp */
+/* Diagram: C:\Users\Marcin\Documents\GitHub\skm2\Protocol_BSP.rdd */
 
 #include "RTDS_MACRO.h"
+#include "RTDS_CommonTypes.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* DEFINES FOR STATES */
 #define RTDS_state_FoundRoutes 1
-#define RTDS_state_OneRoute 2
+#define RTDS_state_NoRoute 2
 #define RTDS_state_OnePath 3
-#define RTDS_state_NoRoute 4
+#define RTDS_state_OneRoute 4
 #define RTDS_state_TopologyProbed 5
 #define RTDS_state_NoPath 6
 #define RTDS_state_TopologyNotProbed 7
@@ -21,11 +23,11 @@ extern "C" {
 #define RTDS_state_NoExternalCommunication 12
 
 /* DEFINES FOR SIGNALS AND TIMERS */
-#define RTDS_message_sMultipleRoutes 1
-#define RTDS_message_sNotLastOnRoute 2
-#define RTDS_message_sFirmwarePart 3
-#define RTDS_message_sTopologyProbing 4
-#define RTDS_message_sNoEchoDown 5
+#define RTDS_message_sNoEchoDown 1
+#define RTDS_message_sTopologyNotProbed 2
+#define RTDS_message_sNotLastOnRoute 3
+#define RTDS_message_sFirmwarePart 4
+#define RTDS_message_sMultipleRoutes 5
 #define RTDS_message_sEcho 6
 #define RTDS_message_sNoExternalCommunication 7
 #define RTDS_message_sAliasDefinition 8
@@ -38,20 +40,19 @@ extern "C" {
 #define RTDS_message_sData 15
 #define RTDS_message_sAddRoute 16
 #define RTDS_message_sNoEchoUp 17
-#define RTDS_message_sTopologyNotProbed 18
-#define RTDS_message_sMissingFirmwarePart 19
-#define RTDS_message_sNewAliases 20
-#define RTDS_message_sEchoDetected 21
-#define RTDS_message_sRemoveRoute 22
-#define RTDS_message_sSendWithEcho 23
-#define RTDS_message_sExternalCommunication 24
-#define RTDS_message_t 25
+#define RTDS_message_sMissingFirmwarePart 18
+#define RTDS_message_sRouteRemoved 19
+#define RTDS_message_sConfirmation 20
+#define RTDS_message_sNewAliases 21
+#define RTDS_message_sEchoDetected 22
+#define RTDS_message_sRemoveRoute 23
+#define RTDS_message_sSendWithEcho 24
+#define RTDS_message_sExternalCommunication 25
 #define RTDS_message_sDown 26
-#define RTDS_message_sConfirmation 27
-#define RTDS_message_sRouteRemoved 28
-#define RTDS_message_sRouteUpdated 29
-#define RTDS_message_sExternalCommunicationError 30
-#define RTDS_message_sNoNewAliases 31
+#define RTDS_message_sTopologyProbing 27
+#define RTDS_message_sRouteUpdated 28
+#define RTDS_message_sExternalCommunicationError 29
+#define RTDS_message_sNoNewAliases 30
 
 /* DEFINES FOR SEMAPHORES */
 

@@ -2,20 +2,24 @@
 
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
-<DictionaryObjects language="sdl" diagramType="blk">
+<DictionaryObjects language="sdl" diagramType="blktype">
 <Signal id="SIG1" name="sExternalCommunication">
 </Signal>
-<Item id="ITEM1" type="block" name="bBlokWezlaBrzegowego" scope="current">
+<Item id="ITEM1" type="block_class" name="bWBClass" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW2" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK5" isFrom="FALSE"/>
+<SignalWindow id="SIGWDW4" gateName="gNode" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK14" isFrom="FALSE"/>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
 </ReceivedSignals>
 </SignalWindow>
-<Channel name="---" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW2"/>
+<SignalWindow id="SIGWDW3" gateName="gExternal" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK13" isFrom="FALSE"/>
+</SignalWindow>
+<Channel name="cExternal" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW3"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW4"/>
 </Item>
 <Item id="ITEM2" type="process" name="pWezelBrzegowy" parentId="ITEM1" scope="none" minInstances="1">
 <DefiningSymbols>
@@ -25,7 +29,10 @@
 <SymbolReference symbolId="SYMB2"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW1" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK5" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK13" isFrom="TRUE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK14" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG1"/>
 </SentSignals>

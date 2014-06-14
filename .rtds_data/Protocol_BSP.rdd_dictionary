@@ -2,219 +2,514 @@
 
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
-<DictionaryObjects language="sdl-rt" diagramType="sys">
+<DictionaryObjects language="sdl" diagramType="sys">
 <Signal id="SIG1" name="sTopologyNotProbed">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG10" name="sNoEchoUp">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG11" name="sRemoveRoute">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG12" name="sExternalCommunication">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG13" name="sDown">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG14" name="sRouteUpdated">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG15" name="sExternalCommunicationError">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG16" name="sNoEchoDown">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG17" name="sEcho">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG18" name="sAliasDefinition">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG19" name="sSendWithEcho">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG2" name="sNotLastOnRoute">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG20" name="sPathBlocked">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG21" name="sEmergencyTrigger">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG22" name="sUpdateFirmware">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG23" name="sData">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG24" name="sRouteRemoved">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG25" name="sConfirmation">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG26" name="sNewAliases">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG27" name="sEchoDetected">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG28" name="sTopologyProbing">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG29" name="sLastOnRoute">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG3" name="sFirmwarePart">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG30" name="sNoNewAliases">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG4" name="sMultipleRoutes">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG5" name="sMissingFirmwarePart">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG6" name="sNoExternalCommunication">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG7" name="sRouteAdded">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG8" name="sNoRoute">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Signal id="SIG9" name="sAddRoute">
 <DeclarationSymbols>
-<SymbolReference symbolId="SYMB3"/>
+<SymbolReference symbolId="SYMB10"/>
 </DeclarationSymbols>
 </Signal>
 <Item id="ITEM1" type="system" name="Protocol_BSP" scope="current">
 <UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
 <SymbolReference symbolId="SYMB1"/>
-<SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW6" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK0" isFrom="TRUE"/>
+<SignalWindow id="SIGWDW45" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK315" isFrom="FALSE"/>
 <Connections>
 <Connection name="cExternalCommunication"/>
 </Connections>
 </SignalWindow>
-<Channel name="cExternalCommunication" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW1"/>
-<Channel name="cGeneralCommunication" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW2"/>
-<Channel name="cNodeSelf" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW5"/>
-</Item>
-<Item id="ITEM2" type="block" name="bBlokWezlaBrzegowego" parentId="ITEM1" scope="none" minInstances="1">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB5"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB5"/>
-</UsingSymbols>
-<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK0" isFrom="FALSE"/>
+<SignalWindow id="SIGWDW44" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK178" isFrom="FALSE"/>
+<Connections>
+<Connection name="cExternal"/>
+</Connections>
 </SignalWindow>
-<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK1" isFrom="FALSE"/>
+<SignalWindow id="SIGWDW47" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK369" isFrom="FALSE"/>
+<Connections>
+<Connection name="cExternal"/>
+</Connections>
+</SignalWindow>
+<SignalWindow id="SIGWDW46" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK339" isFrom="FALSE"/>
+<Connections>
+<Connection name="cExternalCommunication"/>
+</Connections>
+</SignalWindow>
+<SignalWindow id="SIGWDW48" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK430" isFrom="FALSE"/>
+<Connections>
+<Connection name="cExternalCommunication"/>
+</Connections>
+</SignalWindow>
+<Channel name="cNode" fromSignalWindow="SIGWDW29" toSignalWindow="SIGWDW1"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW24"/>
+<Channel name="cExternalCommunication" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW48"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW12" toSignalWindow="SIGWDW4"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW34" toSignalWindow="SIGWDW5"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW14"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW17"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW8" toSignalWindow="SIGWDW28"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW33" toSignalWindow="SIGWDW9"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW10" toSignalWindow="SIGWDW21"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW36" toSignalWindow="SIGWDW11"/>
+<Channel name="cExternal" fromSignalWindow="SIGWDW13" toSignalWindow="SIGWDW47"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW15" toSignalWindow="SIGWDW43"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW32" toSignalWindow="SIGWDW16"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW18" toSignalWindow="SIGWDW38"/>
+<Channel name="cExternalCommunication" fromSignalWindow="SIGWDW19" toSignalWindow="SIGWDW46"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW35" toSignalWindow="SIGWDW20"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW22" toSignalWindow="SIGWDW30"/>
+<Channel name="cExternalCommunication" fromSignalWindow="SIGWDW23" toSignalWindow="SIGWDW45"/>
+<Channel name="cExternal" fromSignalWindow="SIGWDW25" toSignalWindow="SIGWDW44"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW26" toSignalWindow="SIGWDW31"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW42" toSignalWindow="SIGWDW27"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW39" toSignalWindow="SIGWDW37"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW41" toSignalWindow="SIGWDW40"/>
+</Item>
+<Item id="ITEM10" type="block" name="WP_3" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB51"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW16" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK424" isFrom="FALSE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW17" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK425" isFrom="FALSE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW18" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK426" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM11" type="block" name="WB_3" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM4" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB47"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW20" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK342" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG12"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW19" gateName="gExternal" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK339" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM12" type="block" name="WP_9" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB63"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW22" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK435" isFrom="TRUE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW21" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK423" isFrom="FALSE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM13" type="block" name="WB_5" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM4" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB49"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW23" gateName="gExternal" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK315" isFrom="TRUE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW24" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK432" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG12"/>
 </SentSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM3" type="block" name="bBlokWezlaPomiarowego" parentId="ITEM1" scope="none" minInstances="1">
+<Item id="ITEM14" type="block" name="WB_1" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM4" minInstances="1">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB6"/>
+<SymbolReference symbolId="SYMB44"/>
 </DefiningSymbols>
+<SignalWindow id="SIGWDW27" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK427" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG12"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW26" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK185" isFrom="TRUE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW25" gateName="gExternal" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK178" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM15" type="block" name="WP_11" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB60"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW29" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK433" isFrom="TRUE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW28" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK311" isFrom="FALSE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM16" type="block" name="WP_12" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB58"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW30" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK435" isFrom="FALSE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM17" type="block" name="WP_2" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB50"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW31" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK185" isFrom="FALSE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW32" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK424" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM18" type="block" name="WP_5" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB55"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW33" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK317" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM19" type="block" name="WP_7" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB53"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW34" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK350" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM2" type="block_class" name="bWPClass" scope="top">
 <UsingSymbols>
-<SymbolReference symbolId="SYMB6"/>
+<SymbolReference symbolId="SYMB45"/>
+<SymbolReference symbolId="SYMB54"/>
+<SymbolReference symbolId="SYMB55"/>
+<SymbolReference symbolId="SYMB58"/>
+<SymbolReference symbolId="SYMB59"/>
+<SymbolReference symbolId="SYMB57"/>
+<SymbolReference symbolId="SYMB56"/>
+<SymbolReference symbolId="SYMB64"/>
+<SymbolReference symbolId="SYMB50"/>
+<SymbolReference symbolId="SYMB51"/>
+<SymbolReference symbolId="SYMB52"/>
+<SymbolReference symbolId="SYMB53"/>
+<SymbolReference symbolId="SYMB61"/>
+<SymbolReference symbolId="SYMB60"/>
+<SymbolReference symbolId="SYMB63"/>
+<SymbolReference symbolId="SYMB62"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW4" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK2" isFrom="TRUE"/>
-<SentSignals>
-<SignalReference id="SIG28"/>
-</SentSignals>
-<ReceivedSignals>
-<SignalReference id="SIG28"/>
-</ReceivedSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW5" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK2" isFrom="FALSE"/>
-<SentSignals>
-<SignalReference id="SIG28"/>
-</SentSignals>
-<ReceivedSignals>
-<SignalReference id="SIG28"/>
-</ReceivedSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK1" isFrom="TRUE"/>
+</Item>
+<Item id="ITEM20" type="block" name="WP_16" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB57"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW35" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK342" isFrom="TRUE"/>
 <ReceivedSignals>
 <SignalReference id="SIG12"/>
 </ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW36" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK431" isFrom="TRUE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW37" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK436" isFrom="FALSE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM21" type="block" name="WP_6" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB54"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW38" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK426" isFrom="FALSE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM22" type="block" name="WP_13" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB56"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW39" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK436" isFrom="TRUE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW40" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK437" isFrom="FALSE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM23" type="block" name="WP_10" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB64"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW41" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK437" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM24" type="block" name="WP_1" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB45"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW43" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK428" isFrom="FALSE"/>
+<ReceivedSignals>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW42" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK427" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+<Item id="ITEM3" type="block" name="WP_14" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB61"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW1" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK433" isFrom="FALSE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK432" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+<Item id="ITEM4" type="block_class" name="bWBClass" scope="top">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB47"/>
+<SymbolReference symbolId="SYMB46"/>
+<SymbolReference symbolId="SYMB44"/>
+<SymbolReference symbolId="SYMB49"/>
+<SymbolReference symbolId="SYMB48"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="block" name="WB_4" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM4" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB48"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW4" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK429" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG12"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" gateName="gExternal" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK430" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM6" type="block" name="WP_4" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB52"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW5" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK350" isFrom="FALSE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW6" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK370" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW7" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK425" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM7" type="block" name="WP_8" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB62"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW8" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK311" isFrom="TRUE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW9" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK317" isFrom="FALSE"/>
+</SignalWindow>
+<SignalWindow id="SIGWDW10" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK423" isFrom="TRUE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM8" type="block" name="WP_15" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB59"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW12" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK429" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG12"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW11" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK431" isFrom="FALSE"/>
+</SignalWindow>
+</Item>
+<Item id="ITEM9" type="block" name="WB_2" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM4" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB46"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW14" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK370" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG12"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW15" gateName="gNode" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK428" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG12"/>
+</SentSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW13" gateName="gExternal" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK369" isFrom="TRUE"/>
 </SignalWindow>
 </Item>
 </DictionaryObjects>

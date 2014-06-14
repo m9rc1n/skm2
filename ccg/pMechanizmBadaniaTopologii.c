@@ -35,11 +35,14 @@ RTDS_TASK_ENTRY_POINT(pMechanizmBadaniaTopologii)
   short RTDS_transitionExecuted;
   int RTDS_savedSdlState = 0;
 
-  void ** RTDS_myLocals;
-  void ** RTDS_localsStack[1];
+
   RTDS_MSG_DATA_DECL
 
+  void ** RTDS_myLocals;
+  void ** RTDS_localsStack[1];
 
+
+  #include "pMechanizmBadaniaTopologii_tempVars.h"
 
   /* ***************************************************************** */
   /* $(RTDS_HOME)/share/ccg/windows/bricks/RTDS_Process_begin.c begins */
@@ -60,17 +63,12 @@ RTDS_TASK_ENTRY_POINT(pMechanizmBadaniaTopologii)
   /* *************************************************************** */
 
 
+  RTDS_myLocals = NULL;
+  RTDS_localsStack[0] = RTDS_myLocals;
 
 
   /* Initial transition */
-  do	/* Dummy do/while(0) to be able to do 'break's */
-    {
-    RTDS_myLocals = NULL;
-    RTDS_localsStack[0] = RTDS_myLocals;
-    RTDS_start_label:
-    RTDS_SDL_STATE_SET(RTDS_state_TopologyNotProbed);
-    break;
-    } while (0);
+  RTDS_SDL_STATE_SET(RTDS_state_TopologyNotProbed);
 
   /* ****************************************************************** */
   /* $(RTDS_HOME)/share/ccg/windows/bricks/RTDS_Proc_loopStart.c begins */
@@ -152,33 +150,6 @@ RTDS_TASK_ENTRY_POINT(pMechanizmBadaniaTopologii)
       RTDS_transitionExecuted = 1;
       switch(RTDS_currentContext->sdlState)
         {
-        /* Transitions for state FoundRoutes */
-        case RTDS_state_FoundRoutes:
-          switch(RTDS_currentContext->currentMessage->messageNumber)
-            {
-            /* Transition for state FoundRoutes - message * */
-            default:
-              goto RTDS_start_label;
-            } /* End of switch on message */
-          break;
-        /* Transitions for state TopologyProbed */
-        case RTDS_state_TopologyProbed:
-          switch(RTDS_currentContext->currentMessage->messageNumber)
-            {
-            /* Transition for state TopologyProbed - message sMultipleRoutes */
-            case RTDS_message_sMultipleRoutes:
-              RTDS_SDL_STATE_SET(RTDS_state_FoundRoutes);
-              break;
-            /* Transition for state TopologyProbed - message sTopologyProbing */
-            case RTDS_message_sTopologyProbing:
-              RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sTopologyProbing, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
-              RTDS_SDL_STATE_SET(RTDS_state_TopologyProbed);
-              break;
-            default:
-              RTDS_transitionExecuted = 0;
-              break;
-            } /* End of switch on message */
-          break;
         /* Transitions for state TopologyNotProbed */
         case RTDS_state_TopologyNotProbed:
           switch(RTDS_currentContext->currentMessage->messageNumber)
@@ -190,6 +161,34 @@ RTDS_TASK_ENTRY_POINT(pMechanizmBadaniaTopologii)
               break;
             default:
               RTDS_transitionExecuted = 0;
+              break;
+            } /* End of switch on message */
+          break;
+        /* Transitions for state TopologyProbed */
+        case RTDS_state_TopologyProbed:
+          switch(RTDS_currentContext->currentMessage->messageNumber)
+            {
+            /* Transition for state TopologyProbed - message sTopologyProbing */
+            case RTDS_message_sTopologyProbing:
+              RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sTopologyProbing, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
+              RTDS_SDL_STATE_SET(RTDS_state_TopologyProbed);
+              break;
+            /* Transition for state TopologyProbed - message sMultipleRoutes */
+            case RTDS_message_sMultipleRoutes:
+              RTDS_SDL_STATE_SET(RTDS_state_FoundRoutes);
+              break;
+            default:
+              RTDS_transitionExecuted = 0;
+              break;
+            } /* End of switch on message */
+          break;
+        /* Transitions for state FoundRoutes */
+        case RTDS_state_FoundRoutes:
+          switch(RTDS_currentContext->currentMessage->messageNumber)
+            {
+            /* Transition for state FoundRoutes - message * */
+            default:
+              RTDS_SDL_STATE_SET(RTDS_state_TopologyNotProbed);
               break;
             } /* End of switch on message */
           break;

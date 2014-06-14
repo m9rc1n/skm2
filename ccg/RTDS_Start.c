@@ -119,16 +119,6 @@ DWORD RTDS_Start( void * dummy )
   /* SEMAPHORE CREATIONS */
 
   /* PROCESS CREATIONS */
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
-  RTDS_STARTUP_PROCESS_CREATE("pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP, pPojedynczaDrogaDowolnegoWezlaWP, RTDS_DEFAULT_PROCESS_PRIORITY);
   RTDS_STARTUP_PROCESS_CREATE("pMechanizmBadaniaTopologii", RTDS_process_pMechanizmBadaniaTopologii, pMechanizmBadaniaTopologii, RTDS_DEFAULT_PROCESS_PRIORITY);
   RTDS_STARTUP_PROCESS_CREATE("pDrogiKomunikacjiWP", RTDS_process_pDrogiKomunikacjiWP, pDrogiKomunikacjiWP, RTDS_DEFAULT_PROCESS_PRIORITY);
   RTDS_STARTUP_PROCESS_CREATE("RTDS_Env", RTDS_process_RTDS_Env, RTDS_Env, RTDS_DEFAULT_PROCESS_PRIORITY);

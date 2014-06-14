@@ -2,7 +2,7 @@
 
 <!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
 
-<Diagram language="sdl-rt" type="sys" name="Protocol_BSP" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+<Diagram language="sdl" type="sys" name="Protocol_BSP" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
 <DiagramPartition name="Declarations" nbPagesH="1" nbPagesV="1">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
@@ -11,107 +11,488 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB3" type="sdlInherits" xCenter="154" yCenter="231" fixedDimensions="TRUE" width="286" height="440" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlText" xCenter="176" yCenter="242" fixedDimensions="FALSE" width="286" height="440" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>MESSAGE sTopologyProbing;
-MESSAGE sRouteAdded;
-MESSAGE sRouteRemoved;
-MESSAGE sRouteUpdated;
-MESSAGE sAddRoute;
-MESSAGE sRemoveRoute;
-MESSAGE sAliasDefinition;
-MESSAGE sConfirmation;
-MESSAGE sData;
-MESSAGE sFirmwarePart;
-MESSAGE sMissingFirmwarePart;
-MESSAGE sNoRoute;
-MESSAGE sMultipleRoutes;
-MESSAGE sTopologyNotProbed;
-MESSAGE sNoExternalCommunication;
-MESSAGE sExternalCommunicationError;
-MESSAGE sPathBlocked;
-MESSAGE sExternalCommunication;
-MESSAGE sEmergencyTrigger;
-MESSAGE sNoNewAliases;
-MESSAGE sNewAliases;
-MESSAGE sUpdateFirmware;
-MESSAGE sNotLastOnRoute;
-MESSAGE sSendWithEcho;
-MESSAGE sLastOnRoute;
-MESSAGE sNoEchoDown;
-MESSAGE sDown;
-MESSAGE sEchoDetected;
-MESSAGE sNoEchoUp;
-MESSAGE sEcho;</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="132" yCenter="484" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>#include "Protocol_BSP_types.h"</Text>
+<Text>SIGNAL sTopologyProbing;
+SIGNAL sRouteAdded;
+SIGNAL sRouteRemoved;
+SIGNAL sRouteUpdated;
+SIGNAL sAddRoute;
+SIGNAL sRemoveRoute;
+SIGNAL sAliasDefinition;
+SIGNAL sConfirmation;
+SIGNAL sData;
+SIGNAL sFirmwarePart;
+SIGNAL sMissingFirmwarePart;
+SIGNAL sNoRoute;
+SIGNAL sMultipleRoutes;
+SIGNAL sTopologyNotProbed;
+SIGNAL sNoExternalCommunication;
+SIGNAL sExternalCommunicationError;
+SIGNAL sPathBlocked;
+SIGNAL sExternalCommunication;
+SIGNAL sEmergencyTrigger;
+SIGNAL sNoNewAliases;
+SIGNAL sNewAliases;
+SIGNAL sUpdateFirmware;
+SIGNAL sNotLastOnRoute;
+SIGNAL sSendWithEcho;
+SIGNAL sLastOnRoute;
+SIGNAL sNoEchoDown;
+SIGNAL sDown;
+SIGNAL sEchoDetected;
+SIGNAL sNoEchoUp;
+SIGNAL sEcho;</Text>
 </Symbol>
 </Symbol>
 </DiagramPartition>
 
-<DiagramPartition name="Architecture" nbPagesH="2" nbPagesV="2">
+<DiagramPartition name="Architecture" nbPagesH="3" nbPagesV="2">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
 
-<Symbol symbolId="SYMB4" type="sdlSysDgmFrm" xCenter="538" yCenter="728" fixedDimensions="TRUE" width="1033" height="1391" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="sdlSysDgmFrm" xCenter="807" yCenter="728" fixedDimensions="TRUE" width="1571" height="1391" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB5" type="sdlBlk" xCenter="121" yCenter="165" fixedDimensions="TRUE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB44" type="sdlBlkTypeInst" xCenter="165" yCenter="165" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>bBlokWezlaBrzegowego</Text>
+<Text>WB_1 : bWBClass</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="sdlBlk" xCenter="726" yCenter="165" fixedDimensions="TRUE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB45" type="sdlBlkTypeInst" xCenter="792" yCenter="165" fixedDimensions="TRUE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>bBlokWezlaPomiarowego</Text>
+<Text>WP_1 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB46" type="sdlBlkTypeInst" xCenter="1386" yCenter="165" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WB_2 : bWBClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB47" type="sdlBlkTypeInst" xCenter="1386" yCenter="1210" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WB_3 : bWBClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB48" type="sdlBlkTypeInst" xCenter="792" yCenter="1199" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WB_4 : bWBClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB49" type="sdlBlkTypeInst" xCenter="165" yCenter="1210" fixedDimensions="TRUE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WB_5 : bWBClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB50" type="sdlBlkTypeInst" xCenter="165" yCenter="341" fixedDimensions="TRUE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_2 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB51" type="sdlBlkTypeInst" xCenter="792" yCenter="341" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_3 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB52" type="sdlBlkTypeInst" xCenter="1386" yCenter="341" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_4 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB53" type="sdlBlkTypeInst" xCenter="1386" yCenter="517" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_7 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB54" type="sdlBlkTypeInst" xCenter="792" yCenter="539" fixedDimensions="TRUE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_6 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB55" type="sdlBlkTypeInst" xCenter="165" yCenter="473" fixedDimensions="TRUE" width="264" height="88" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_5 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB56" type="sdlBlkTypeInst" xCenter="1386" yCenter="825" fixedDimensions="TRUE" width="286" height="88" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_13 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB57" type="sdlBlkTypeInst" xCenter="1386" yCenter="1023" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_16 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB58" type="sdlBlkTypeInst" xCenter="792" yCenter="847" fixedDimensions="TRUE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_12 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB59" type="sdlBlkTypeInst" xCenter="792" yCenter="1012" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_15 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB60" type="sdlBlkTypeInst" xCenter="165" yCenter="803" fixedDimensions="TRUE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_11 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB61" type="sdlBlkTypeInst" xCenter="165" yCenter="990" fixedDimensions="TRUE" width="264" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_14 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB62" type="sdlBlkTypeInst" xCenter="165" yCenter="671" fixedDimensions="TRUE" width="264" height="88" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_8 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB63" type="sdlBlkTypeInst" xCenter="792" yCenter="671" fixedDimensions="TRUE" width="264" height="88" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_9 : bWPClass</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB64" type="sdlBlkTypeInst" xCenter="1386" yCenter="649" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WP_10 : bWPClass</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK0" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cExternalCommunication</Text>
-<Connector attachedSymbolId="SYMB4" type="chnl" isOutside="FALSE" side="n" position="-0.764762826718" endType="midarrow">
+<Link linkId="LINK178" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cExternal</Text>
+<Connector attachedSymbolId="SYMB44" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gExternal</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="FALSE" side="n" position="-0.789306174411" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="165"/>
+<LinkSegment orientation="v" length="-176"/>
 
 </Link>
 
-<Link linkId="LINK1" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cGeneralCommunication</Text>
-<Connector attachedSymbolId="SYMB6" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Link linkId="LINK185" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB44" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB50" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="176"/>
+
+</Link>
+
+<Link linkId="LINK427" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB45" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[sExternalCommunication]</Text>
-<Text id="2"></Text>
+<Text id="2">gNode</Text>
 </Connector>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Connector attachedSymbolId="SYMB44" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
-<Text id="2"></Text>
+<Text id="2">gNode</Text>
 </Connector>
-<LinkSegment orientation="h" length="-605"/>
+<LinkSegment orientation="h" length="-627"/>
 
 </Link>
 
-<Link linkId="LINK2" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cNodeSelf</Text>
-<Connector attachedSymbolId="SYMB6" type="chnl" isOutside="TRUE" side="x" position="0.125" endType="midarrow">
-<Text id="1">[sTopologyProbing]</Text>
+<Link linkId="LINK369" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cExternal</Text>
+<Connector attachedSymbolId="SYMB46" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gExternal</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="FALSE" side="n" position="0.765117759389" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB6" type="chnl" isOutside="TRUE" side="y" position="-0.272727272727" endType="midarrow">
-<Text id="1">[sTopologyProbing]</Text>
+<LinkSegment orientation="v" length="-165"/>
+
+</Link>
+
+<Link linkId="LINK428" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB46" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB45" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[sExternalCommunication]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="h" length="-594"/>
+
+</Link>
+
+<Link linkId="LINK339" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cExternalCommunication</Text>
+<Connector attachedSymbolId="SYMB47" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gExternal</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="FALSE" side="s" position="0.765117759389" endType="midarrow">
+<Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="87"/>
-<LinkSegment orientation="h" length="141"/>
-<LinkSegment orientation="v" length="-93"/>
-<LinkSegment orientation="h" length="-152"/>
+<LinkSegment orientation="v" length="187"/>
+
+</Link>
+
+<Link linkId="LINK430" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cExternalCommunication</Text>
+<Connector attachedSymbolId="SYMB48" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gExternal</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="FALSE" side="s" position="0.008911521324" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="198"/>
+
+</Link>
+
+<Link linkId="LINK315" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cExternalCommunication</Text>
+<Connector attachedSymbolId="SYMB49" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gExternal</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="FALSE" side="s" position="-0.789306174411" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="187"/>
+
+</Link>
+
+<Link linkId="LINK424" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB50" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB51" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="h" length="627"/>
+
+</Link>
+
+<Link linkId="LINK426" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB51" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB54" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="198"/>
+
+</Link>
+
+<Link linkId="LINK370" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB52" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sExternalCommunication]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB46" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="-176"/>
+
+</Link>
+
+<Link linkId="LINK425" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB52" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB51" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="h" length="-594"/>
+
+</Link>
+
+<Link linkId="LINK350" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB53" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB52" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="-176"/>
+
+</Link>
+
+<Link linkId="LINK317" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB55" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB62" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="198"/>
+
+</Link>
+
+<Link linkId="LINK436" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB56" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB57" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="198"/>
+
+</Link>
+
+<Link linkId="LINK342" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB57" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sExternalCommunication]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB47" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="187"/>
+
+</Link>
+
+<Link linkId="LINK431" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB57" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB59" type="chnlgate" isOutside="TRUE" side="y" position="0.333333333333" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="h" length="-594"/>
+
+</Link>
+
+<Link linkId="LINK429" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB59" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sExternalCommunication]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB48" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="187"/>
+
+</Link>
+
+<Link linkId="LINK433" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB60" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB61" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="187"/>
+
+</Link>
+
+<Link linkId="LINK432" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB61" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[sExternalCommunication]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB49" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="220"/>
+
+</Link>
+
+<Link linkId="LINK311" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB62" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB60" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="132"/>
+
+</Link>
+
+<Link linkId="LINK423" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB62" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB63" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="h" length="627"/>
+
+</Link>
+
+<Link linkId="LINK435" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB63" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB58" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="176"/>
+
+</Link>
+
+<Link linkId="LINK437" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB64" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB56" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="v" length="176"/>
 
 </Link>
 </DiagramPartition>

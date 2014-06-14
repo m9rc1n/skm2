@@ -2,7 +2,7 @@
 
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
-<DictionaryObjects language="sdl-rt" diagramType="blk">
+<DictionaryObjects language="sdl" diagramType="blk">
 <Signal id="SIG1" name="sExternalCommunication">
 </Signal>
 <Signal id="SIG2" name="sRouteUpdated">
@@ -26,7 +26,7 @@
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW10" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK0" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK201" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG1"/>
 </SentSignals>
@@ -37,34 +37,34 @@
 <Channel name="---" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW5"/>
 <Channel name="cRoutesState" fromSignalWindow="SIGWDW9" toSignalWindow="SIGWDW7"/>
 </Item>
-<Item id="ITEM2" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="10" maxInstances="10">
+<Item id="ITEM2" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="1">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB11"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW4" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK4" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK200" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG5"/>
 <SignalReference id="SIG6"/>
 </SentSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW5" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK3" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK202" isFrom="FALSE"/>
 <ReceivedSignals>
 <SignalReference id="SIG7"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW1" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK0" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK201" isFrom="TRUE"/>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW2" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK1" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK196" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG2"/>
 <SignalReference id="SIG3"/>
@@ -77,7 +77,7 @@
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW3" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK1" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK196" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG2"/>
 <SignalReference id="SIG3"/>
@@ -98,13 +98,13 @@
 <SymbolReference symbolId="SYMB3"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW6" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK3" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK202" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG7"/>
 </SentSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW7" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK2" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK194" isFrom="FALSE"/>
 <ReceivedSignals>
 <SignalReference id="SIG8"/>
 <SignalReference id="SIG9"/>
@@ -119,14 +119,14 @@
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW8" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK4" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK200" isFrom="FALSE"/>
 <ReceivedSignals>
 <SignalReference id="SIG5"/>
 <SignalReference id="SIG6"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW9" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK2" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK194" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG8"/>
 <SignalReference id="SIG9"/>

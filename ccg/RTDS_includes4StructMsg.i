@@ -1,5 +1,4 @@
 # 1 "RTDS_includes4StructMsg.c"
-# 1 "C:\\Users\\Marcin\\Documents\\GitHub\\skm2 - Copy\\ccg//"
 # 1 "<built-in>"
 # 1 "<command line>"
 # 1 "RTDS_includes4StructMsg.c"
@@ -15247,7 +15246,7 @@ typedef struct RTDS_MessageHeader
   long messageNumber;
   long timerUniqueId;
 
-  unsigned long messageUniqueId;
+
 
   RTDS_SdlInstanceId * sender;
   RTDS_SdlInstanceId * receiver;
@@ -15302,11 +15301,12 @@ typedef struct RTDS_GlobalTraceInfo
   RTDS_GlobalProcessInfo * currentContext;
   } RTDS_GlobalTraceInfo;
 # 5 "Protocol_BSP.h" 2
-# 1 "../Protocol_BSP_types.h" 1
-
-
-# 1 "../RTDS_String.h" 1
-# 27 "../RTDS_String.h"
+# 1 "RTDS_CommonTypes.h" 1
+# 9 "RTDS_CommonTypes.h"
+typedef enum _RTDS_BOOLEAN { FALSE=0, TRUE=1 } RTDS_BOOLEAN;
+# 6 "Protocol_BSP.h" 2
+# 1 "RTDS_String.h" 1
+# 27 "RTDS_String.h"
 typedef char RTDS_String[256];
 
 
@@ -15352,7 +15352,7 @@ extern char * RTDS_StringModify(RTDS_String sDest, RTDS_String s, int charIndex,
 
 
 char * RTDS_StringReplace(RTDS_String sDest, RTDS_String s, int index, int length, RTDS_String replacement);
-# 84 "../RTDS_String.h"
+# 84 "RTDS_String.h"
 void * RTDS_BinStringCat(
   void * result_var,
   unsigned int * p_result_length,
@@ -15362,7 +15362,7 @@ void * RTDS_BinStringCat(
   unsigned char * bin_string1_buffer,
   unsigned char * bin_string2_buffer
 );
-# 105 "../RTDS_String.h"
+# 105 "RTDS_String.h"
 void * RTDS_OctetStringCat(
   void * result_var,
   unsigned int * p_result_length,
@@ -15372,7 +15372,7 @@ void * RTDS_OctetStringCat(
   unsigned char * octet_string1_buffer,
   unsigned char * octet_string2_buffer
 );
-# 131 "../RTDS_String.h"
+# 131 "RTDS_String.h"
 void * RTDS_sequenceConcat(
   void * result_var,
   unsigned int * result_length,
@@ -15383,16 +15383,9 @@ void * RTDS_sequenceConcat(
   unsigned char * sequence_var2_elements,
   unsigned int element_size
 );
-# 4 "../Protocol_BSP_types.h" 2
-# 6 "Protocol_BSP.h" 2
-# 1 "../RTDS_CommonTypes.h" 1
-# 9 "../RTDS_CommonTypes.h"
-typedef enum _RTDS_BOOLEAN { FALSE=0, TRUE=1 } RTDS_BOOLEAN;
 # 7 "Protocol_BSP.h" 2
-# 1 "../RTDS_String.h" 1
-# 8 "Protocol_BSP.h" 2
-# 1 "../RTDS_Set.h" 1
-# 36 "../RTDS_Set.h"
+# 1 "RTDS_Set.h" 1
+# 36 "RTDS_Set.h"
 enum RTDS_setOfCompareOperator
   {
   RTDS_SET_OF_CMP_EQ,
@@ -15403,18 +15396,9 @@ enum RTDS_setOfCompareOperator
   RTDS_SET_OF_CMP_GE,
   RTDS_SET_OF_CMP_CMP
   };
-# 9 "Protocol_BSP.h" 2
-
-
-# 1 "Protocol_BSP_types.h" 1
-# 12 "Protocol_BSP.h" 2
+# 8 "Protocol_BSP.h" 2
 # 2 "RTDS_includes4StructMsg.c" 2
 # 1 "RTDS_messages.h" 1
-
-
-
-# 1 "C:/RTDS/share/ccg/common/RTDS_CommonTypes.h" 1
-# 5 "RTDS_messages.h" 2
 # 20 "RTDS_messages.h"
 %%%SEND-RECEIVE-MACROS%%%
 # 3 "RTDS_includes4StructMsg.c" 2
@@ -15601,17 +15585,7 @@ typedef long long off64_t;
 # 21 "c:/rtds/share/ccg/windows/RTDS_OS.h" 2
 # 34 "c:/rtds/share/ccg/windows/RTDS_OS.h"
     long RTDS_IsSemaphoreAvailable( RTDS_SemaphoreId );
-
-
-
-
-    extern void RTDS_ForceTimer( RTDS_SdlInstanceId * sdlInstanceId, int timerNumber );
-    extern void RTDS_SetSystemTime( long timeValue );
-    extern void RTDS_SimulatorMsgQueueSend( long , long, unsigned char *, RTDS_SdlInstanceId * , RTDS_SdlInstanceId *, RTDS_GlobalProcessInfo *RTDS_currentContext );
-
-
-
-
+# 46 "c:/rtds/share/ccg/windows/RTDS_OS.h"
     extern RTDS_GlobalProcessInfo * RTDS_GetProcessInfoFromSdlInstanceId( RTDS_SdlInstanceId * sdlInstanceId );
     extern RTDS_GlobalProcessInfo * RTDS_GetProcessInfoFromProcessNum( int sdlProcessNumber );
     extern RTDS_GlobalProcessInfo * RTDS_GetProcessInfoFromRtosTaskId( RTDS_RtosTaskId rtosTaskId );
@@ -15651,25 +15625,9 @@ extern unsigned long RTDS_GetSystemTime ( void );
 
 
     extern void RTDS_SimulatorTrace( enum RTDS_EventType event, void * eventParameter1, long eventParameter2, RTDS_GlobalProcessInfo * currentContext, int waitAck);
-
-
-
-    extern unsigned long RTDS_GetMessageUniqueId ( void );
-    extern void RTDS_ReleaseMessageUniqueId( unsigned long );
-    extern void RTDS_DummyTraceFunction ( void );
-    extern void RTDS_DummyRunUntilQueueEmptyFunction ( void );
-
-
-
-
-
-
-
+# 99 "c:/rtds/share/ccg/windows/RTDS_OS.h"
 extern RTDS_GlobalProcessInfo * RTDS_globalProcessInfo;
 extern RTDS_GlobalSemaphoreInfo * RTDS_globalSemaphoreInfo;
-
-
-    extern void * RTDS_globalMessageUniqueIdPool;
 # 112 "c:/rtds/share/ccg/windows/RTDS_OS.h"
     extern RTDS_GlobalTraceInfo RTDS_globalTraceEntry;
 
@@ -15709,9 +15667,9 @@ extern void RTDS_ConfigureTrace(RTDS_CmdTraceConfig * configStruc);
 extern unsigned long RTDS_globalSystemTime; extern unsigned long RTDS_globalStartTime;;
 extern RTDS_SemaphoreId RTDS_globalSystemSemId;;
 extern RTDS_SemaphoreId RTDS_globalStartSynchro;;
-extern RTDS_SemaphoreId RTDS_globalTraceSemId;;
+;
 # 5 "RTDS_gen.h" 2
-# 66 "RTDS_gen.h"
+# 67 "RTDS_gen.h"
 extern void pPojedynczaDrogaDowolnegoWezlaWP( RTDS_GlobalProcessInfo * RTDS_currentContext );
 extern void pMechanizmBadaniaTopologii( RTDS_GlobalProcessInfo * RTDS_currentContext );
 extern void pDrogiKomunikacjiWP( RTDS_GlobalProcessInfo * RTDS_currentContext );

@@ -36,11 +36,13 @@ RTDS_TASK_ENTRY_POINT(pPojedynczaDrogaDowolnegoWezlaWP)
   int RTDS_savedSdlState = 0;
 
   int paths = 0;
-  void * RTDS_myLocals[1];
-  void ** RTDS_localsStack[1];
   RTDS_MSG_DATA_DECL
 
+  void * RTDS_myLocals[1];
+  void ** RTDS_localsStack[1];
 
+
+  #include "pPojedynczaDrogaDowolnegoWezlaWP_tempVars.h"
 
   /* ***************************************************************** */
   /* $(RTDS_HOME)/share/ccg/windows/bricks/RTDS_Process_begin.c begins */
@@ -61,17 +63,12 @@ RTDS_TASK_ENTRY_POINT(pPojedynczaDrogaDowolnegoWezlaWP)
   /* *************************************************************** */
 
 
+  RTDS_myLocals[0] = (void*)&paths;
+  RTDS_localsStack[0] = RTDS_myLocals;
 
 
   /* Initial transition */
-  do	/* Dummy do/while(0) to be able to do 'break's */
-    {
-    RTDS_myLocals[0] = (void*)&paths;
-    RTDS_localsStack[0] = RTDS_myLocals;
-    RTDS_start_label:
-    RTDS_SDL_STATE_SET(RTDS_state_NoPath);
-    break;
-    } while (0);
+  RTDS_SDL_STATE_SET(RTDS_state_NoPath);
 
   /* ****************************************************************** */
   /* $(RTDS_HOME)/share/ccg/windows/bricks/RTDS_Proc_loopStart.c begins */
@@ -157,12 +154,6 @@ RTDS_TASK_ENTRY_POINT(pPojedynczaDrogaDowolnegoWezlaWP)
         case RTDS_state_OnePath:
           switch(RTDS_currentContext->currentMessage->messageNumber)
             {
-            /* Transition for state OnePath - message sRouteAdded */
-            case RTDS_message_sRouteAdded:
-              paths = paths + 1;
-              RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRouteUpdated, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
-              RTDS_SDL_STATE_SET(RTDS_state_MultiplePaths);
-              break;
             /* Transition for state OnePath - message sTopologyProbing */
             case RTDS_message_sTopologyProbing:
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRouteUpdated, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
@@ -178,7 +169,14 @@ RTDS_TASK_ENTRY_POINT(pPojedynczaDrogaDowolnegoWezlaWP)
               paths = paths - 1;
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRouteRemoved, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRemoveRoute, 0, NULL, "pDrogiKomunikacjiWP", RTDS_process_pDrogiKomunikacjiWP);
-              goto RTDS_start_label;
+              RTDS_SDL_STATE_SET(RTDS_state_NoPath);
+              break;
+            /* Transition for state OnePath - message sRouteAdded */
+            case RTDS_message_sRouteAdded:
+              paths = paths + 1;
+              RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRouteUpdated, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
+              RTDS_SDL_STATE_SET(RTDS_state_MultiplePaths);
+              break;
             default:
               RTDS_transitionExecuted = 0;
               break;
@@ -188,8 +186,8 @@ RTDS_TASK_ENTRY_POINT(pPojedynczaDrogaDowolnegoWezlaWP)
         case RTDS_state_NoPath:
           switch(RTDS_currentContext->currentMessage->messageNumber)
             {
-            /* Transition for state NoPath - message sExternalCommunication */
-            case RTDS_message_sExternalCommunication:
+            /* Transition for state NoPath - message sRouteAdded */
+            case RTDS_message_sRouteAdded:
               paths = paths + 1;
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRouteAdded, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sAddRoute, 0, NULL, "pDrogiKomunikacjiWP", RTDS_process_pDrogiKomunikacjiWP);
@@ -202,8 +200,8 @@ RTDS_TASK_ENTRY_POINT(pPojedynczaDrogaDowolnegoWezlaWP)
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sAddRoute, 0, NULL, "pDrogiKomunikacjiWP", RTDS_process_pDrogiKomunikacjiWP);
               RTDS_SDL_STATE_SET(RTDS_state_OnePath);
               break;
-            /* Transition for state NoPath - message sRouteAdded */
-            case RTDS_message_sRouteAdded:
+            /* Transition for state NoPath - message sExternalCommunication */
+            case RTDS_message_sExternalCommunication:
               paths = paths + 1;
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRouteAdded, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
               RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sAddRoute, 0, NULL, "pDrogiKomunikacjiWP", RTDS_process_pDrogiKomunikacjiWP);
@@ -218,11 +216,6 @@ RTDS_TASK_ENTRY_POINT(pPojedynczaDrogaDowolnegoWezlaWP)
         case RTDS_state_MultiplePaths:
           switch(RTDS_currentContext->currentMessage->messageNumber)
             {
-            /* Transition for state MultiplePaths - message sRouteUpdated */
-            case RTDS_message_sRouteUpdated:
-              RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRouteUpdated, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
-              RTDS_SDL_STATE_SET(RTDS_state_MultiplePaths);
-              break;
             /* Transition for state MultiplePaths - message sRouteAdded */
             case RTDS_message_sRouteAdded:
               paths = paths + 1;
@@ -243,6 +236,11 @@ RTDS_TASK_ENTRY_POINT(pPojedynczaDrogaDowolnegoWezlaWP)
                 break;
                 }
               RTDS_SDL_STATE_SET(RTDS_state_OnePath);
+              break;
+            /* Transition for state MultiplePaths - message sRouteUpdated */
+            case RTDS_message_sRouteUpdated:
+              RTDS_MSG_QUEUE_SEND_TO_NAME(RTDS_message_sRouteUpdated, 0, NULL, "pPojedynczaDrogaDowolnegoWezlaWP", RTDS_process_pPojedynczaDrogaDowolnegoWezlaWP);
+              RTDS_SDL_STATE_SET(RTDS_state_MultiplePaths);
               break;
             /* Transition for state MultiplePaths - message sTopologyProbing */
             case RTDS_message_sTopologyProbing:
