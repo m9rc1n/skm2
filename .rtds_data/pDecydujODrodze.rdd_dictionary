@@ -8,56 +8,91 @@
 <SymbolReference symbolId="SYMB21"/>
 </InputSymbols>
 </Signal>
+<Signal id="SIG2" name="sExternalCommunicationError">
+<InputSymbols>
+<SymbolReference symbolId="SYMB27"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG3" name="sRouteAdded">
+<SendSymbols>
+<SymbolReference symbolId="SYMB25"/>
+</SendSymbols>
+</Signal>
 <Item id="ITEM1" type="process" name="pDecydujODrodze" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 <Body>
+<SentSignals>
+<SignalReference id="SIG3"/>
+</SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM11"/>
 <SymbolReference symbolId="SYMB21"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM11"/>
+<SymbolReference symbolId="SYMB27"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" scope="block">
+<Item id="ITEM10" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" scope="block">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB23"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM3" type="state" name="Idle" parentId="ITEM1" scope="none">
+<Item id="ITEM11" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB20"/>
 </DefiningSymbols>
 <UsingSymbols>
+<SymbolReference symbolId="SYMB29"/>
 <SymbolReference symbolId="SYMB20"/>
+<SymbolReference symbolId="SYMB26"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM4" type="variable" name="i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB13"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM5" type="variable" name="wb_table" parentId="ITEM1" scope="none" variableTypeName="pid_tab">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB13"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM6" type="variable" name="len" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB13"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM7" type="variable" name="found_pid" parentId="ITEM1" scope="none" variableTypeName="PID">
+<Item id="ITEM2" type="variable" name="i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM8" type="variable" name="found_route" parentId="ITEM1" scope="none" variableTypeName="BOOLEAN">
+<Item id="ITEM3" type="variable" name="route_tab" parentId="ITEM1" scope="none" variableTypeName="ROUTE_TAB">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="found_i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="len" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="route" parentId="ITEM1" scope="none" variableTypeName="ROUTE_INFO">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="found_prev_route" parentId="ITEM1" scope="none" variableTypeName="BOOLEAN">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="found_pid" parentId="ITEM1" scope="none" variableTypeName="PID">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM9" type="variable" name="wb_tab" parentId="ITEM1" scope="none" variableTypeName="PID_TAB">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>

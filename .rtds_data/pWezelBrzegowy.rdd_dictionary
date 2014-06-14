@@ -3,16 +3,32 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="t" isTimer="TRUE">
+<Signal id="SIG1" name="sExternalError">
 <InputSymbols>
-<SymbolReference symbolId="SYMB249"/>
+<SymbolReference symbolId="SYMB254"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG2" name="sExternalCommunication">
 <SendSymbols>
 <SymbolReference symbolId="SYMB251"/>
-<SymbolReference symbolId="SYMB250"/>
+<SymbolReference symbolId="SYMB258"/>
+<SymbolReference symbolId="SYMB257"/>
 </SendSymbols>
+</Signal>
+<Signal id="SIG3" name="sExternalCommunicationError">
+<SendSymbols>
+<SymbolReference symbolId="SYMB255"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG4" name="spontanic" isTimer="TRUE">
+<InputSymbols>
+<SymbolReference symbolId="SYMB249"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG5" name="sExternalCommunicationRestored">
+<InputSymbols>
+<SymbolReference symbolId="SYMB256"/>
+</InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process" name="pWezelBrzegowy" scope="current">
 <UsingSymbols>
@@ -20,36 +36,58 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
+<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB249"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB254"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB256"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="timer" name="t" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="state" name="ExternalCommunicationError" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB252"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB252"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="timer" name="spontanic" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB248"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM3" type="state" name="NoExternalCommunication" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="state" name="ExternalCommunication" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB10"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="NoExternalCommunication" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB238"/>
 </DefiningSymbols>
 <UsingSymbols>
 <SymbolReference symbolId="SYMB238"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM4" type="state" name="ExternalCommunication" parentId="ITEM1" scope="none">
-<UsingSymbols>
-<SymbolReference symbolId="SYMB10"/>
 </UsingSymbols>
 </Item>
 </DictionaryObjects>

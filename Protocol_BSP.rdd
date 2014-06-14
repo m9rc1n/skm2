@@ -11,7 +11,7 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlText" xCenter="176" yCenter="297" fixedDimensions="FALSE" width="286" height="506" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlText" xCenter="154" yCenter="275" fixedDimensions="FALSE" width="264" height="506" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>SIGNAL sTopologyProbing;
 SIGNAL sRouteAdded;
@@ -27,7 +27,9 @@ SIGNAL sMissingFirmwarePart;
 SIGNAL sNoRoute;
 SIGNAL sMultipleRoutes;
 SIGNAL sTopologyNotProbed;
+SIGNAL sExternalError;
 SIGNAL sNoExternalCommunication;
+SIGNAL sExternalCommunicationRestored;
 SIGNAL sExternalCommunicationError;
 SIGNAL sPathBlocked;
 SIGNAL sExternalCommunication;
@@ -44,18 +46,17 @@ SIGNAL sEchoDetected;
 SIGNAL sNoEchoUp;
 SIGNAL sEcho;
 
-SIGNALLIST slRouteChanged =
+SIGNALLIST slRouteChangedExternal =
+  sExternalCommunicationError,
   sExternalCommunication,
   sRouteAdded,
   sRouteRemoved,
-  sRouteUpdated;</Text>
-</Symbol>
+  sRouteUpdated;
 
-<Symbol symbolId="SYMB65" type="sdlText" xCenter="99" yCenter="594" fixedDimensions="FALSE" width="132" height="66" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>NEWTYPE pid_tab
-  STRING (Pid)
-ENDNEWTYPE;</Text>
+SIGNALLIST slRouteChanged =
+  sRouteAdded,
+  sRouteRemoved,
+  sRouteUpdated;</Text>
 </Symbol>
 </Symbol>
 </DiagramPartition>
@@ -194,7 +195,7 @@ ENDNEWTYPE;</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB50" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[(slRouteChanged)]</Text>
+<Text id="1">[(slRouteChangedExternal)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <LinkSegment orientation="v" length="176"/>
@@ -204,7 +205,7 @@ ENDNEWTYPE;</Text>
 <Link linkId="LINK456" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB45" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[(slRouteChanged)]</Text>
+<Text id="1">[(slRouteChangedExternal)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB44" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
@@ -236,7 +237,7 @@ ENDNEWTYPE;</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB45" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sExternalCommunication]</Text>
+<Text id="1">[(slRouteChangedExternal)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <LinkSegment orientation="h" length="-594"/>
@@ -316,7 +317,7 @@ ENDNEWTYPE;</Text>
 <Link linkId="LINK370" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB52" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[(slRouteChanged)]</Text>
+<Text id="1">[(slRouteChangedExternal)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB46" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
@@ -386,7 +387,7 @@ ENDNEWTYPE;</Text>
 <Link linkId="LINK342" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB57" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[(slRouteChanged)]</Text>
+<Text id="1">[(slRouteChangedExternal)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB47" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
@@ -414,7 +415,7 @@ ENDNEWTYPE;</Text>
 <Link linkId="LINK429" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB59" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[(slRouteChanged)]</Text>
+<Text id="1">[(slRouteChangedExternal)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB48" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
@@ -442,7 +443,7 @@ ENDNEWTYPE;</Text>
 <Link linkId="LINK432" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB61" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
-<Text id="1">[(slRouteChanged)]</Text>
+<Text id="1">[(slRouteChangedExternal)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB49" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">

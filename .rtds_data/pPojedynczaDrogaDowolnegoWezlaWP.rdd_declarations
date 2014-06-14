@@ -1,19 +1,22 @@
-Ä}q(UversionqU4.2.1qUobjectq]q]q(crtds.editor.business.SyntaxChecker
+Ä}q(UversionqU4.2.1qUobjectq]q]q((crtds.editor.business.SyntaxChecker
 SyntaxTreeNodeAdapter
 qoq}q	(Utextq
 Upaths INTEGER := 0qU
-identifierqU2UtypeqUvardeclqUchildrenq]q((hoq}q(h
-UINTEGERqhU2hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h
-hhU2hhhhhhubub(crtds.editor.business.SyntaxChecker
+identifierqU1UtypeqUvardeclqUchildrenq]q((hoq}q(h
+UINTEGERqhU1hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h
+hhU1hhhhhhubub(crtds.editor.business.SyntaxChecker
 SyntaxTreeNode
 qoq}q(h
 U
 paths := 0qhNhUsnglvardeclqh]q((hoq}q (h
-Upathsq!hU2hUvarnameq"h]q#hhub(hoq$}q%(h
-U0hU2hU	dfltvalueq&h]q'(hoq(}q)(h
-U0hU2hUnbexprq*h]q+hh$ubahhubeubeh(hoq,}q-(h
-UDCL
-
-  paths INTEGER := 0;q.hNhUdatadeclq/h]q0hahNububcrtds.editor.business.ElementReference
+Upathsq!hU1hUvarnameq"h]q#hhub(hoq$}q%(h
+U0hU1hU	dfltvalueq&h]q'(hoq(}q)(h
+U0hU1hUnbexprq*h]q+hh$ubahhubeubeh(hoq,}q-(h
+U*DCL
+  paths INTEGER := 0;
+TIMER spontanic;q.hNhUdatadeclq/h]q0(h(hoq1}q2(h
+U	spontanicq3hU2hU	timerdeclq4h]q5(hoq6}q7(h
+U	spontanicq8hU2hU	timernameq9h]q:h(hoq;}q<(h
+h3hU2hh4hh5hh1ububahh,ubehNububcrtds.editor.business.ElementReference
 SymbolReference
-q1)Åq2}q3(Uprojectq4h4QUsymbolIdq5USYMB43q6UdiagramFileNameq7UJc:\users\marcin\documents\github\skm2\ppojedynczadrogadowolnegowezlawp.rddq8ubKáq9aÜq:u.
+q=)Åq>}q?(Uprojectq@h@QUsymbolIdqAUSYMB43qBUdiagramFileNameqCUJc:\users\marcin\documents\github\skm2\ppojedynczadrogadowolnegowezlawp.rddqDubKáqEh1h=)ÅqF}qG(h@h@QhAhBhChDubKáqHeÜqIu.

@@ -1,1 +1,30 @@
-Ä}q(UversionqU4.2.1qUobjectq]qu.
+Ä}q(UversionqU4.2.1qUobjectq]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q(Utextq	UMAX_ROUTES INTEGER = 100q
+U
+identifierqU0UtypeqUsynonymdeclqUchildrenq]q((hoq}q(h	UINTEGERqhU0hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h	h
+hU0hhhhh(hoq}q(h	h
+hU0hhhhhhububub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h	UMAX_ROUTES = 100qhNhUsnglsynonymdeclqh]q((hoq }q!(h	U
+MAX_ROUTESq"hU0hUsynonymnameq#h]q$hhub(hoq%}q&(h	U100q'hU0hU
+synonymvalq(h]q)(hoq*}q+(h	U100q,hU0hUnbexprq-h]q.hh%ubahhubeubeh(hoq/}q0(h	U!SYNONYM MAX_ROUTES INTEGER = 100;q1hNhUdatadeclq2h]q3hahNubub(hoq4}q5(h	U#PID_TAB STRING ( PID ) ENDNEWTYPE ;q6hU0hUtypedeclq7h]q8((hoq9}q:(h	UPID_TABq;hU0hUtypenameq<h]q=h(hoq>}q?(h	h6hU0hh7hh8hh4ubub(hoq@}qA(h	USTRING ( PID )qBhU1hU	gnrtrtypeqCh]qD((hoqE}qF(h	USTRINGqGhU1hU	gnrtrnameqHh]qIhh@ub(hoqJ}qK(h	UPIDqLhU1hU
+gnrtrparamqMh]qN(hoqO}qP(h	UPIDqQhU1hU	paramtypeqRh]qS(hoqT}qU(h	UPIDqVhU1hUtypenameqWh]qXhhOubahhJubahh@ubehh>ubeh(hoqY}qZ(h	U_NEWTYPE PID_TAB
+  STRING (PID)
+ENDNEWTYPE;
+
+NEWTYPE ROUTE_TAB
+  STRING (ROUTE_INFO)
+ENDNEWTYPE;q[hNhh2h]q\(h4(hoq]}q^(h	U,ROUTE_TAB STRING ( ROUTE_INFO ) ENDNEWTYPE ;q_hU4hUtypedeclq`h]qa((hoqb}qc(h	U	ROUTE_TABqdhU4hUtypenameqeh]qfh(hoqg}qh(h	h_hU4hh`hhahh]ubub(hoqi}qj(h	USTRING ( ROUTE_INFO )qkhU5hU	gnrtrtypeqlh]qm((hoqn}qo(h	USTRINGqphU5hU	gnrtrnameqqh]qrhhiub(hoqs}qt(h	U
+ROUTE_INFOquhU5hU
+gnrtrparamqvh]qw(hoqx}qy(h	U
+ROUTE_INFOqzhU5hU	paramtypeq{h]q|(hoq}}q~(h	U
+ROUTE_INFOqhU5hUtypenameqÄh]qÅhhxubahhsubahhiubehhgubehhYubehNubub(hoqÇ}qÉ(h	UZROUTE_INFO STRUCT wb_pid PID ; route_pid PID ; route PID_TAB ; cost INTEGER ; ENDNEWTYPE ;qÑhU0hUtypedeclqÖh]qÜ((hoqá}qà(h	U
+ROUTE_INFOqâhU0hUtypenameqäh]qãh(hoqå}qç(h	hÑhU0hhÖhhÜhhÇubub(hoqé}qè(h	U;wb_pid PID ; route_pid PID ; route PID_TAB ; cost INTEGER ;qêhU2hU
+structtypeqëh]qí((hoqì}qî(h	Uwb_pid PID ;qïhU2hUflddefqñh]qó((hoqò}qô(h	Uwb_pidqöhU2hUfldnameqõh]qúhhìub(hoqù}qû(h	UPIDqühU2hUfldtypeq†h]q°(hoq¢}q£(h	UPIDq§hU2hUtypenameq•h]q¶hhùubahhìubehhéub(hoqß}q®(h	Uroute_pid PID ;q©hU3hUflddefq™h]q´((hoq¨}q≠(h	U	route_pidqÆhU3hUfldnameqØh]q∞hhßub(hoq±}q≤(h	UPIDq≥hU3hUfldtypeq¥h]qµ(hoq∂}q∑(h	UPIDq∏hU3hUtypenameqπh]q∫hh±ubahhßubehhéub(hoqª}qº(h	Uroute PID_TAB ;qΩhU4hUflddefqæh]qø((hoq¿}q¡(h	Urouteq¬hU4hUfldnameq√h]qƒhhªub(hoq≈}q∆(h	UPID_TABq«hU4hUfldtypeq»h]q…(hoq }qÀ(h	UPID_TABqÃhU4hUtypenameqÕh]qŒhh≈ubahhªubehhéub(hoqœ}q–(h	Ucost INTEGER ;q—hU5hUflddefq“h]q”((hoq‘}q’(h	Ucostq÷hU5hUfldnameq◊h]qÿhhœub(hoqŸ}q⁄(h	UINTEGERq€hU5hUfldtypeq‹h]q›(hoqﬁ}qﬂ(h	UINTEGERq‡hU5hUtypenameq·h]q‚hhŸubahhœubehhéubehhåubeh(hoq„}q‰(h	UoNEWTYPE ROUTE_INFO
+  STRUCT
+    wb_pid PID;
+    route_pid PID;
+    route PID_TAB;
+    cost INTEGER;
+ENDNEWTYPE;qÂhNhh2h]qÊhÇahNububh]eu.

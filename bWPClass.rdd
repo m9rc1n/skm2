@@ -4,6 +4,42 @@
 
 <Diagram language="sdl" type="blktype" name="bWPClass" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
+<DiagramPartition name="Definitions" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB10" type="sdlBlkTypeDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB11" type="sdlText" xCenter="121" yCenter="154" fixedDimensions="TRUE" width="154" height="110" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>NEWTYPE PID_TAB
+  STRING (PID)
+ENDNEWTYPE;
+
+NEWTYPE ROUTE_TAB
+  STRING (ROUTE_INFO)
+ENDNEWTYPE;</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB17" type="sdlText" xCenter="154" yCenter="253" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>SYNONYM MAX_ROUTES INTEGER = 100;</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB18" type="sdlText" xCenter="110" yCenter="352" fixedDimensions="FALSE" width="132" height="110" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>NEWTYPE ROUTE_INFO
+  STRUCT
+    wb_pid PID;
+    route_pid PID;
+    route PID_TAB;
+    cost INTEGER;
+ENDNEWTYPE;</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
 <DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
@@ -26,7 +62,7 @@
 <Text>pDecydujODrodze</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlPrcs" xCenter="429" yCenter="495" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlPrcs" xCenter="429" yCenter="495" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>pPojedynczaDrogaDowolnegoWezlaWP (0, 100)</Text>
 </Symbol>
@@ -39,7 +75,7 @@
 <Text id="2">gNode</Text>
 </Connector>
 <Connector attachedSymbolId="SYMB9" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sRouteAdded]</Text>
+<Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="429"/>
@@ -65,7 +101,7 @@ sMultipleRoutes]</Text>
 <Link linkId="LINK116" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB7" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[(slRouteChanged)]</Text>
+<Text id="1">[(slRouteChangedExternal)]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.0335483870968" endType="midarrow">
