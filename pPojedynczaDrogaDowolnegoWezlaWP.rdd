@@ -81,7 +81,7 @@
 <Text>sRouteAdded</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB24" type="sdlInputSig" xCenter="187" yCenter="880" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB24" type="sdlInputSig" xCenter="176" yCenter="880" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sRouteRemoved</Text>
 </Symbol>
@@ -138,7 +138,7 @@
   paths INTEGER := 0;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlState" xCenter="231" yCenter="781" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlState" xCenter="176" yCenter="781" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>MultiplePaths</Text>
 </Symbol>
@@ -336,7 +336,7 @@
 
 </Link>
 
-<Link linkId="LINK243" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK380" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB22" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -347,7 +347,7 @@
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="44"/>
-<LinkSegment orientation="h" length="-132"/>
+<LinkSegment orientation="h" length="-187"/>
 <LinkSegment orientation="v" length="33"/>
 
 </Link>
@@ -366,7 +366,7 @@
 
 </Link>
 
-<Link linkId="LINK355" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK362" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB24" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -377,7 +377,7 @@
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="44"/>
-<LinkSegment orientation="h" length="77"/>
+<LinkSegment orientation="h" length="88"/>
 <LinkSegment orientation="v" length="44"/>
 
 </Link>
@@ -504,7 +504,7 @@
 
 </Link>
 
-<Link linkId="LINK265" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK376" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -516,7 +516,7 @@
 </Connector>
 <LinkSegment orientation="h" length="253"/>
 <LinkSegment orientation="v" length="-264"/>
-<LinkSegment orientation="h" length="-627"/>
+<LinkSegment orientation="h" length="-682"/>
 
 </Link>
 
@@ -610,9 +610,9 @@
 
 </Link>
 
-<Link linkId="LINK251" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK379" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="-0.333333333333" endType="voidend">
+<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -621,18 +621,18 @@
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="44"/>
-<LinkSegment orientation="h" length="253"/>
+<LinkSegment orientation="h" length="286"/>
 <LinkSegment orientation="v" length="55"/>
 
 </Link>
 
-<Link linkId="LINK354" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK375" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="-0.333333333333" endType="voidend">
+<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB24" type="void" isOutside="TRUE" side="x" position="0.333333333333" endType="voidend">
+<Connector attachedSymbolId="SYMB24" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -640,9 +640,9 @@
 
 </Link>
 
-<Link linkId="LINK255" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK377" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="-0.333333333333" endType="voidend">
+<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -651,14 +651,14 @@
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="44"/>
-<LinkSegment orientation="h" length="396"/>
+<LinkSegment orientation="h" length="429"/>
 <LinkSegment orientation="v" length="55"/>
 
 </Link>
 
-<Link linkId="LINK253" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK378" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="-0.333333333333" endType="voidend">
+<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -667,7 +667,7 @@
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="44"/>
-<LinkSegment orientation="h" length="550"/>
+<LinkSegment orientation="h" length="583"/>
 <LinkSegment orientation="v" length="55"/>
 
 </Link>

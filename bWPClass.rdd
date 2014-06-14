@@ -7,7 +7,7 @@
 <DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB1" type="sdlBlkTypeDgmFrm" xCenter="638" yCenter="418" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1" type="sdlBlkTypeDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
@@ -60,11 +60,11 @@ sMultipleRoutes]</Text>
 <Link linkId="LINK22" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[sExternalCommunication]</Text>
+<Text id="1">[(slRouteChanged)]</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="-0.170322580645" endType="midarrow">
-<Text id="1">[]</Text>
+<Text id="1">[(slRouteChanged)]</Text>
 <Text id="2">gNode</Text>
 </Connector>
 <LinkSegment orientation="h" length="-484"/>
@@ -83,26 +83,6 @@ sAddRoute]</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="h" length="528"/>
-
-</Link>
-
-<Link linkId="LINK3" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cSelfSingleRoute</Text>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="-0.75" endType="midarrow">
-<Text id="1">[sRouteUpdated,
-sRouteRemoved,
-sRouteAdded]</Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="x" position="0.75" endType="midarrow">
-<Text id="1">[sRouteUpdated,
-sRouteRemoved,
-sRouteAdded]</Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="165"/>
-<LinkSegment orientation="h" length="198"/>
-<LinkSegment orientation="v" length="-165"/>
 
 </Link>
 </DiagramPartition>

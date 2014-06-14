@@ -15,20 +15,37 @@
 </Signal>
 <Signal id="SIG6" name="sExternalCommunication">
 </Signal>
+<Signal id="SIG7" name="sRouteAdded">
+</Signal>
+<Signal id="SIG8" name="sRouteRemoved">
+</Signal>
+<Signal id="SIG9" name="sRouteUpdated">
+</Signal>
+<SignalList id="LIST1" name="slRouteChanged">
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<DeclarationSymbols>
+</DeclarationSymbols>
+</SignalList>
 <Item id="ITEM1" type="block_class" name="bWPClass" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW8" gateName="gNode" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK22" isFrom="FALSE"/>
-<SentSignals>
-<SignalReference id="SIG6"/>
-</SentSignals>
+<SentSignalLists>
+<SignalListReference id="LIST1"/>
+</SentSignalLists>
+<ReceivedSignalLists>
+<SignalListReference id="LIST1"/>
+</ReceivedSignalLists>
 </SignalWindow>
 <Channel name="cRoutesState" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW3"/>
-<Channel name="cDealWithRoute" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW2"/>
-<Channel name="---" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW7"/>
-<Channel name="cNode" fromSignalWindow="SIGWDW5" toSignalWindow="SIGWDW8"/>
+<Channel name="cDealWithRoute" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW2"/>
+<Channel name="---" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW5"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW8"/>
 </Item>
 <Item id="ITEM2" type="process" name="pDrogiKomunikacjiWP" parentId="ITEM1" scope="none" minInstances="1">
 <DefiningSymbols>
@@ -81,23 +98,26 @@
 <SymbolReference symbolId="SYMB5"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW5" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK22" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK25" isFrom="FALSE"/>
 <ReceivedSignals>
-<SignalReference id="SIG6"/>
+<SignalReference id="SIG5"/>
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW6" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK22" isFrom="TRUE"/>
+<SentSignalLists>
+<SignalListReference id="LIST1"/>
+</SentSignalLists>
+<ReceivedSignalLists>
+<SignalListReference id="LIST1"/>
+</ReceivedSignalLists>
+</SignalWindow>
+<SignalWindow id="SIGWDW7" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK24" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
 </SentSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW7" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK25" isFrom="FALSE"/>
-<ReceivedSignals>
-<SignalReference id="SIG5"/>
-</ReceivedSignals>
 </SignalWindow>
 </Item>
 </DictionaryObjects>
