@@ -5,7 +5,9 @@
 <DictionaryObjects language="sdl" diagramType="blktype">
 <Signal id="SIG1" name="sNoRoute">
 </Signal>
-<Signal id="SIG10" name="sExternalCommunication">
+<Signal id="SIG10" name="sRouteRemoved">
+</Signal>
+<Signal id="SIG11" name="sRouteUpdated">
 </Signal>
 <Signal id="SIG2" name="sMultipleRoutes">
 </Signal>
@@ -15,27 +17,29 @@
 </Signal>
 <Signal id="SIG5" name="sTopologyProbing">
 </Signal>
-<Signal id="SIG6" name="sRouteAdded">
+<Signal id="SIG6" name="sExternalCommunicationError">
 </Signal>
-<Signal id="SIG7" name="sRouteRemoved">
+<Signal id="SIG7" name="sExternalCommunication">
 </Signal>
-<Signal id="SIG8" name="sRouteUpdated">
+<Signal id="SIG8" name="sConfirmation">
 </Signal>
-<Signal id="SIG9" name="sExternalCommunicationError">
+<Signal id="SIG9" name="sRouteAdded">
 </Signal>
-<SignalList id="LIST1" name="slRouteChanged">
+<SignalList id="LIST1" name="slRouteChangedExternal">
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG10"/>
 <SignalReference id="SIG6"/>
 <SignalReference id="SIG7"/>
-<SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG11"/>
 <DeclarationSymbols>
 </DeclarationSymbols>
 </SignalList>
-<SignalList id="LIST2" name="slRouteChangedExternal">
-<SignalReference id="SIG9"/>
-<SignalReference id="SIG10"/>
-<SignalReference id="SIG7"/>
-<SignalReference id="SIG6"/>
+<SignalList id="LIST2" name="slRouteChanged">
 <SignalReference id="SIG8"/>
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG11"/>
+<SignalReference id="SIG10"/>
 <DeclarationSymbols>
 </DeclarationSymbols>
 </SignalList>
@@ -47,16 +51,13 @@
 <SignalWindow id="SIGWDW12" gateName="gNode" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK116" isFrom="FALSE"/>
 <SentSignalLists>
-<SignalListReference id="LIST2"/>
-</SentSignalLists>
-<ReceivedSignalLists>
 <SignalListReference id="LIST1"/>
-</ReceivedSignalLists>
+</SentSignalLists>
 </SignalWindow>
 <SignalWindow id="SIGWDW11" gateName="gNode" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK124" isFrom="TRUE"/>
 <ReceivedSignalLists>
-<SignalListReference id="LIST1"/>
+<SignalListReference id="LIST2"/>
 </ReceivedSignalLists>
 </SignalWindow>
 <Channel name="cRoutesState" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW3"/>
@@ -94,14 +95,14 @@
 <SymbolReference symbolId="SYMB3"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW1" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK145" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK151" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
 </SentSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW2" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK146" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK152" isFrom="FALSE"/>
 <ReceivedSignals>
 <SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
@@ -122,7 +123,7 @@
 </SentSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW3" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK145" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK151" isFrom="FALSE"/>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
@@ -138,21 +139,15 @@
 </UsingSymbols>
 <SignalWindow id="SIGWDW5" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK116" isFrom="TRUE"/>
-<SentSignalLists>
-<SignalListReference id="LIST1"/>
-</SentSignalLists>
 <ReceivedSignalLists>
-<SignalListReference id="LIST2"/>
+<SignalListReference id="LIST1"/>
 </ReceivedSignalLists>
 </SignalWindow>
 <SignalWindow id="SIGWDW6" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK121" isFrom="TRUE"/>
 <SentSignalLists>
-<SignalListReference id="LIST1"/>
+<SignalListReference id="LIST2"/>
 </SentSignalLists>
-<ReceivedSignalLists>
-<SignalListReference id="LIST1"/>
-</ReceivedSignalLists>
 </SignalWindow>
 </Item>
 <Item id="ITEM9" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="0" maxInstances="MAX_ROUTES">
@@ -165,20 +160,17 @@
 <SignalWindow id="SIGWDW7" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK124" isFrom="FALSE"/>
 <SentSignalLists>
-<SignalListReference id="LIST1"/>
+<SignalListReference id="LIST2"/>
 </SentSignalLists>
 </SignalWindow>
 <SignalWindow id="SIGWDW8" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK121" isFrom="FALSE"/>
-<SentSignalLists>
-<SignalListReference id="LIST1"/>
-</SentSignalLists>
 <ReceivedSignalLists>
-<SignalListReference id="LIST1"/>
+<SignalListReference id="LIST2"/>
 </ReceivedSignalLists>
 </SignalWindow>
 <SignalWindow id="SIGWDW9" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK146" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK152" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>

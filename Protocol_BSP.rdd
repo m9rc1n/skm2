@@ -11,7 +11,7 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlText" xCenter="154" yCenter="275" fixedDimensions="FALSE" width="264" height="506" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlText" xCenter="154" yCenter="286" fixedDimensions="FALSE" width="264" height="528" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>SIGNAL sTopologyProbing;
 SIGNAL sRouteAdded;
@@ -49,11 +49,13 @@ SIGNAL sEcho;
 SIGNALLIST slRouteChangedExternal =
   sExternalCommunicationError,
   sExternalCommunication,
+  sConfirmation,
   sRouteAdded,
   sRouteRemoved,
   sRouteUpdated;
 
 SIGNALLIST slRouteChanged =
+  sConfirmation,
   sRouteAdded,
   sRouteRemoved,
   sRouteUpdated;</Text>
@@ -125,7 +127,7 @@ SIGNALLIST slRouteChanged =
 
 <Symbol symbolId="SYMB55" type="sdlBlkTypeInst" xCenter="165" yCenter="473" fixedDimensions="TRUE" width="264" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>WP_5 : bWPClass</Text>
+<Text>WP_5 : bLastWPClass</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB56" type="sdlBlkTypeInst" xCenter="1386" yCenter="825" fixedDimensions="TRUE" width="286" height="88" color="#000000" fillColor="#ffffff">
@@ -140,7 +142,7 @@ SIGNALLIST slRouteChanged =
 
 <Symbol symbolId="SYMB58" type="sdlBlkTypeInst" xCenter="792" yCenter="847" fixedDimensions="TRUE" width="264" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>WP_12 : bWPClass</Text>
+<Text>WP_12 : bLastWPClass</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB59" type="sdlBlkTypeInst" xCenter="792" yCenter="1012" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
@@ -170,7 +172,7 @@ SIGNALLIST slRouteChanged =
 
 <Symbol symbolId="SYMB64" type="sdlBlkTypeInst" xCenter="1386" yCenter="649" fixedDimensions="TRUE" width="286" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>WP_10 : bWPClass</Text>
+<Text>WP_10 : bLastWPClass</Text>
 </Symbol>
 </Symbol>
 
@@ -353,6 +355,20 @@ SIGNALLIST slRouteChanged =
 <Text id="2">gNode</Text>
 </Connector>
 <LinkSegment orientation="v" length="-176"/>
+
+</Link>
+
+<Link linkId="LINK457" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cNode</Text>
+<Connector attachedSymbolId="SYMB53" type="chnlgate" isOutside="TRUE" side="y" position="0.333333333333" endType="midarrow">
+<Text id="1">[(slRouteChanged)]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB54" type="chnlgate" isOutside="TRUE" side="y" position="-0.333333333333" endType="midarrow">
+<Text id="1">[(slRouteChanged)]</Text>
+<Text id="2">gNode</Text>
+</Connector>
+<LinkSegment orientation="h" length="-594"/>
 
 </Link>
 

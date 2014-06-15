@@ -3,9 +3,13 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sExternalCommunicationError">
+<Signal id="SIG1" name="sRouteAdded">
+<SendSymbols>
+<SymbolReference symbolId="SYMB25"/>
+<SymbolReference symbolId="SYMB61"/>
+</SendSymbols>
 <InputSymbols>
-<SymbolReference symbolId="SYMB27"/>
+<SymbolReference symbolId="SYMB60"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG2" name="sRouteUpdated">
@@ -16,7 +20,17 @@
 <SymbolReference symbolId="SYMB136"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG3" name="sRouteRemoved">
+<Signal id="SIG3" name="sExternalCommunicationError">
+<InputSymbols>
+<SymbolReference symbolId="SYMB27"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG4" name="sExternalCommunication">
+<InputSymbols>
+<SymbolReference symbolId="SYMB21"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG5" name="sRouteRemoved">
 <SendSymbols>
 <SymbolReference symbolId="SYMB52"/>
 </SendSymbols>
@@ -24,77 +38,69 @@
 <SymbolReference symbolId="SYMB138"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG4" name="sRouteAdded">
-<SendSymbols>
-<SymbolReference symbolId="SYMB25"/>
-<SymbolReference symbolId="SYMB61"/>
-</SendSymbols>
-<InputSymbols>
-<SymbolReference symbolId="SYMB60"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG5" name="sExternalCommunication">
-<InputSymbols>
-<SymbolReference symbolId="SYMB21"/>
-</InputSymbols>
-</Signal>
-<Item id="ITEM1" type="process" name="pDecydujODrodze" scope="current">
+<Item id="ITEM1" type="process" name="pLastDecydujODrodze" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 <Body>
 <SentSignals>
+<SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG2"/>
 <SignalReference id="SIG4"/>
 <SignalReference id="SIG5"/>
-<SignalReference id="SIG2"/>
-<SignalReference id="SIG3"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB136"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB21"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB138"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB27"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB60"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM10" type="variable" name="found_prev_route" parentId="ITEM1" scope="none" variableTypeName="BOOLEAN">
+<Item id="ITEM10" type="variable" name="found_i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM11" type="variable" name="len" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM11" type="variable" name="wb_tab" parentId="ITEM1" scope="none" variableTypeName="PID_TAB">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM2" type="state" name="Idle" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="process" name="pLastPojedynczaDrogaDowolnegoWezlaWP" scope="block">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB59"/>
+<SymbolReference symbolId="SYMB23"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB30"/>
 <SymbolReference symbolId="SYMB45"/>
-<SymbolReference symbolId="SYMB63"/>
+<SymbolReference symbolId="SYMB30"/>
 <SymbolReference symbolId="SYMB131"/>
+<SymbolReference symbolId="SYMB63"/>
 </DefiningSymbols>
 <UsingSymbols>
 <SymbolReference symbolId="SYMB58"/>
@@ -104,38 +110,32 @@
 <SymbolReference symbolId="SYMB26"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM3" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" scope="block">
-<UsingSymbols>
-<SymbolReference symbolId="SYMB59"/>
-<SymbolReference symbolId="SYMB23"/>
-</UsingSymbols>
-</Item>
 <Item id="ITEM4" type="variable" name="i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="variable" name="found_i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM5" type="variable" name="route_tab" parentId="ITEM1" scope="none" variableTypeName="ROUTE_TAB">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM6" type="variable" name="route" parentId="ITEM1" scope="none" variableTypeName="ROUTE_INFO">
+<Item id="ITEM6" type="variable" name="found_prev_route" parentId="ITEM1" scope="none" variableTypeName="BOOLEAN">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM7" type="variable" name="found_pid" parentId="ITEM1" scope="none" variableTypeName="PID">
+<Item id="ITEM7" type="variable" name="route" parentId="ITEM1" scope="none" variableTypeName="ROUTE_INFO">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM8" type="variable" name="wb_tab" parentId="ITEM1" scope="none" variableTypeName="PID_TAB">
+<Item id="ITEM8" type="variable" name="len" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM9" type="variable" name="route_tab" parentId="ITEM1" scope="none" variableTypeName="ROUTE_TAB">
+<Item id="ITEM9" type="variable" name="found_pid" parentId="ITEM1" scope="none" variableTypeName="PID">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>

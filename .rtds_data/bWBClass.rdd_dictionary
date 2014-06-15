@@ -3,24 +3,27 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="blktype">
-<Signal id="SIG1" name="sExternalCommunicationRestored">
+<Signal id="SIG1" name="sConfirmation">
 </Signal>
-<Signal id="SIG2" name="sExternalError">
+<Signal id="SIG2" name="sRouteAdded">
 </Signal>
-<Signal id="SIG3" name="sExternalCommunication">
+<Signal id="SIG3" name="sRouteRemoved">
 </Signal>
-<Signal id="SIG4" name="sExternalCommunicationError">
+<Signal id="SIG4" name="sRouteUpdated">
 </Signal>
-<Signal id="SIG5" name="sRouteAdded">
+<Signal id="SIG5" name="sExternalCommunicationRestored">
 </Signal>
-<Signal id="SIG6" name="sRouteRemoved">
+<Signal id="SIG6" name="sExternalError">
 </Signal>
-<Signal id="SIG7" name="sRouteUpdated">
+<Signal id="SIG7" name="sExternalCommunication">
+</Signal>
+<Signal id="SIG8" name="sExternalCommunicationError">
 </Signal>
 <SignalList id="LIST1" name="slRouteChanged">
-<SignalReference id="SIG5"/>
-<SignalReference id="SIG6"/>
-<SignalReference id="SIG7"/>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
 <DeclarationSymbols>
 </DeclarationSymbols>
 </SignalList>
@@ -28,21 +31,7 @@
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
-<SignalWindow id="SIGWDW4" gateName="gExternal" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK21" isFrom="FALSE"/>
-<SentSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
-</SentSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW5" gateName="gNode" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK22" isFrom="FALSE"/>
-<ReceivedSignals>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG4"/>
-</ReceivedSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW6" gateName="gNode" insideDiagram="TRUE">
+<SignalWindow id="SIGWDW4" gateName="gNode" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK30" isFrom="TRUE"/>
 <SentSignalLists>
 <SignalListReference id="LIST1"/>
@@ -51,42 +40,34 @@
 <SignalListReference id="LIST1"/>
 </ReceivedSignalLists>
 </SignalWindow>
-<Channel name="cExternal" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW4"/>
-<Channel name="cNode" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW5"/>
-<Channel name="cNode" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW3"/>
-</Item>
-<Item id="ITEM2" type="process" name="pWezelBrzegowy" parentId="ITEM1" scope="none" minInstances="1">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB2"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB2"/>
-</UsingSymbols>
-<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK21" isFrom="TRUE"/>
-<ReceivedSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
-</ReceivedSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK22" isFrom="TRUE"/>
+<SignalWindow id="SIGWDW5" gateName="gExternal" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK21" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG3"/>
-<SignalReference id="SIG4"/>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG6"/>
 </SentSignals>
 </SignalWindow>
+<SignalWindow id="SIGWDW6" gateName="gNode" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK22" isFrom="FALSE"/>
+<ReceivedSignals>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+</ReceivedSignals>
+</SignalWindow>
+<Channel name="cNode" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW1"/>
+<Channel name="cExternal" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW5"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW6"/>
 </Item>
-<Item id="ITEM3" type="block_class" name="bWPClass" scope="top">
+<Item id="ITEM2" type="block_class" name="bLastWPClass" scope="top">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM4" type="block" name="WBP" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM3" minInstances="1">
+<Item id="ITEM3" type="block" name="WBP" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM2" minInstances="1">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB4"/>
 </DefiningSymbols>
-<SignalWindow id="SIGWDW3" gateName="gNode" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW1" gateName="gNode" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK30" isFrom="FALSE"/>
 <SentSignalLists>
 <SignalListReference id="LIST1"/>
@@ -94,6 +75,28 @@
 <ReceivedSignalLists>
 <SignalListReference id="LIST1"/>
 </ReceivedSignalLists>
+</SignalWindow>
+</Item>
+<Item id="ITEM4" type="process" name="pWezelBrzegowy" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK21" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG6"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK22" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+</SentSignals>
 </SignalWindow>
 </Item>
 </DictionaryObjects>

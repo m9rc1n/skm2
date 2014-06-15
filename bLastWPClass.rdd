@@ -2,7 +2,7 @@
 
 <!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
 
-<Diagram language="sdl" type="blktype" name="bWPClass" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+<Diagram language="sdl" type="blktype" name="bLastWPClass" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
 <DiagramPartition name="Definitions" nbPagesH="1" nbPagesV="1">
 <PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
@@ -10,33 +10,6 @@
 <Symbol symbolId="SYMB10" type="sdlBlkTypeDgmFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
-
-<Symbol symbolId="SYMB11" type="sdlText" xCenter="121" yCenter="154" fixedDimensions="TRUE" width="154" height="110" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>NEWTYPE PID_TAB
-  STRING (PID)
-ENDNEWTYPE;
-
-NEWTYPE ROUTE_TAB
-  STRING (ROUTE_INFO)
-ENDNEWTYPE;</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB17" type="sdlText" xCenter="154" yCenter="253" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>SYNONYM MAX_ROUTES INTEGER = 100;</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB18" type="sdlText" xCenter="110" yCenter="352" fixedDimensions="FALSE" width="132" height="110" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>NEWTYPE ROUTE_INFO
-  STRUCT
-    wb_pid PID;
-    route_pid PID;
-    route PID_TAB;
-    cost INTEGER;
-ENDNEWTYPE;</Text>
-</Symbol>
 </Symbol>
 </DiagramPartition>
 
@@ -49,26 +22,26 @@ ENDNEWTYPE;</Text>
 
 <Symbol symbolId="SYMB3" type="sdlPrcs" xCenter="957" yCenter="495" fixedDimensions="TRUE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pDrogiKomunikacjiWP</Text>
+<Text>pLastDrogiKomunikacjiWP</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB4" type="sdlPrcs" xCenter="429" yCenter="682" fixedDimensions="TRUE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pMechanizmBadaniaTopologii</Text>
+<Text>pLastMechanizmBadaniaTopologii</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlPrcs" xCenter="429" yCenter="374" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlPrcs" xCenter="429" yCenter="374" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pDecydujODrodze</Text>
+<Text>pLastDecydujODrodze</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlPrcs" xCenter="429" yCenter="495" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlPrcs" xCenter="429" yCenter="495" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pPojedynczaDrogaDowolnegoWezlaWP (0, MAX_ROUTES)</Text>
+<Text>pLastPojedynczaDrogaDowolnegoWezlaWP (0, MAX_ROUTES)</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK124" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK154" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode</Text>
 <Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="w" position="0.278709677419" endType="midarrow">
 <Text id="1">[(slRouteChanged)]</Text>
@@ -82,7 +55,7 @@ ENDNEWTYPE;</Text>
 
 </Link>
 
-<Link linkId="LINK151" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK158" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cRoutesState</Text>
 <Connector attachedSymbolId="SYMB3" type="chnl" isOutside="TRUE" side="x" position="0.125" endType="midarrow">
 <Text id="1">[]</Text>
@@ -112,7 +85,7 @@ sMultipleRoutes]</Text>
 
 </Link>
 
-<Link linkId="LINK121" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK155" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cNode2</Text>
 <Connector attachedSymbolId="SYMB7" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
@@ -126,7 +99,7 @@ sMultipleRoutes]</Text>
 
 </Link>
 
-<Link linkId="LINK152" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK156" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cDealWithRoute</Text>
 <Connector attachedSymbolId="SYMB9" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
@@ -141,7 +114,7 @@ sRemoveRoute]</Text>
 
 </Link>
 
-<Link linkId="LINK133" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK157" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cDealWithTopology</Text>
 <Connector attachedSymbolId="SYMB9" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[sTopologyProbing]</Text>

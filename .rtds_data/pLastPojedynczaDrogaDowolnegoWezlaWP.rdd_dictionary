@@ -3,46 +3,38 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sRouteUpdated">
-<SendSymbols>
-<SymbolReference symbolId="SYMB29"/>
-<SymbolReference symbolId="SYMB30"/>
-<SymbolReference symbolId="SYMB22"/>
-<SymbolReference symbolId="SYMB19"/>
-</SendSymbols>
-<InputSymbols>
-<SymbolReference symbolId="SYMB8"/>
-<SymbolReference symbolId="SYMB18"/>
-<SymbolReference symbolId="SYMB26"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG2" name="sRouteAdded">
-<SendSymbols>
-<SymbolReference symbolId="SYMB56"/>
-</SendSymbols>
+<Signal id="SIG1" name="sRouteAdded">
 <InputSymbols>
 <SymbolReference symbolId="SYMB20"/>
 <SymbolReference symbolId="SYMB23"/>
 <SymbolReference symbolId="SYMB7"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG3" name="sRouteRemoved">
+<Signal id="SIG2" name="sRouteUpdated">
+<InputSymbols>
+<SymbolReference symbolId="SYMB8"/>
+<SymbolReference symbolId="SYMB18"/>
+<SymbolReference symbolId="SYMB26"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG3" name="sConfirmation">
 <SendSymbols>
-<SymbolReference symbolId="SYMB15"/>
+<SymbolReference symbolId="SYMB427"/>
+<SymbolReference symbolId="SYMB221"/>
+<SymbolReference symbolId="SYMB832"/>
+<SymbolReference symbolId="SYMB322"/>
+<SymbolReference symbolId="SYMB430"/>
 </SendSymbols>
+</Signal>
+<Signal id="SIG4" name="sRouteRemoved">
 <InputSymbols>
 <SymbolReference symbolId="SYMB6"/>
 <SymbolReference symbolId="SYMB24"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG4" name="sRemoveRoute">
+<Signal id="SIG5" name="sRemoveRoute">
 <SendSymbols>
 <SymbolReference symbolId="SYMB16"/>
-</SendSymbols>
-</Signal>
-<Signal id="SIG5" name="sAddRoute">
-<SendSymbols>
-<SymbolReference symbolId="SYMB52"/>
 </SendSymbols>
 </Signal>
 <Signal id="SIG6" name="sTopologyProbing">
@@ -51,23 +43,26 @@
 <SymbolReference symbolId="SYMB25"/>
 </InputSymbols>
 </Signal>
-<Item id="ITEM1" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" scope="current">
+<Signal id="SIG7" name="sAddRoute">
+<SendSymbols>
+<SymbolReference symbolId="SYMB52"/>
+</SendSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="pLastPojedynczaDrogaDowolnegoWezlaWP" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
-<SignalReference id="SIG4"/>
-<SignalReference id="SIG5"/>
 <SignalReference id="SIG3"/>
+<SignalReference id="SIG5"/>
+<SignalReference id="SIG7"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
-<SignalReference id="SIG3"/>
 <SignalReference id="SIG6"/>
+<SignalReference id="SIG4"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -79,6 +74,10 @@
 <SymbolReference symbolId="SYMB8"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB25"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB17"/>
 </Transition>
@@ -91,24 +90,20 @@
 <SymbolReference symbolId="SYMB20"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB23"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB25"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB26"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB6"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB23"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
 <SymbolReference symbolId="SYMB24"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB26"/>
 </Transition>
 </Transitions>
 </Body>

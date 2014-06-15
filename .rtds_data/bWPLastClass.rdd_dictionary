@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="blktype">
+<Signal id="SIG1" name="sAddRoute">
+</Signal>
+<Signal id="SIG10" name="sExternalCommunication">
+</Signal>
+<Signal id="SIG2" name="sRemoveRoute">
+</Signal>
+<Signal id="SIG3" name="sNoRoute">
+</Signal>
+<Signal id="SIG4" name="sMultipleRoutes">
+</Signal>
+<Signal id="SIG5" name="sTopologyProbing">
+</Signal>
+<Signal id="SIG6" name="sRouteAdded">
+</Signal>
+<Signal id="SIG7" name="sRouteRemoved">
+</Signal>
+<Signal id="SIG8" name="sRouteUpdated">
+</Signal>
+<Signal id="SIG9" name="sExternalCommunicationError">
+</Signal>
+<SignalList id="LIST1" name="slRouteChanged">
+<SignalReference id="SIG6"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG8"/>
+<DeclarationSymbols>
+</DeclarationSymbols>
+</SignalList>
+<SignalList id="LIST2" name="slRouteChangedExternal">
+<SignalReference id="SIG9"/>
+<SignalReference id="SIG10"/>
+<SignalReference id="SIG8"/>
+<SignalReference id="SIG7"/>
+<SignalReference id="SIG6"/>
+<DeclarationSymbols>
+</DeclarationSymbols>
+</SignalList>
+<Item id="ITEM1" type="block_class" name="bWPLastClass" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW12" gateName="gNode" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK36" isFrom="FALSE"/>
+<SentSignalLists>
+<SignalListReference id="LIST2"/>
+</SentSignalLists>
+</SignalWindow>
+<SignalWindow id="SIGWDW11" gateName="gNode" insideDiagram="TRUE">
+<ConnectorReference linkId="LINK28" isFrom="FALSE"/>
+<ReceivedSignalLists>
+<SignalListReference id="LIST1"/>
+</ReceivedSignalLists>
+</SignalWindow>
+<Channel name="cDealWithRoute" fromSignalWindow="SIGWDW8" toSignalWindow="SIGWDW1"/>
+<Channel name="cRoutesState" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW4"/>
+<Channel name="cDealWithTopology" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW3"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW5" toSignalWindow="SIGWDW11"/>
+<Channel name="cNode2" fromSignalWindow="SIGWDW10" toSignalWindow="SIGWDW6"/>
+<Channel name="cNode" fromSignalWindow="SIGWDW9" toSignalWindow="SIGWDW12"/>
+</Item>
+<Item id="ITEM10" type="process" name="pDecydujODrodze" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB14"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB14"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW9" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK36" isFrom="TRUE"/>
+<ReceivedSignalLists>
+<SignalListReference id="LIST2"/>
+</ReceivedSignalLists>
+</SignalWindow>
+<SignalWindow id="SIGWDW10" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK37" isFrom="TRUE"/>
+<SentSignalLists>
+<SignalListReference id="LIST1"/>
+</SentSignalLists>
+</SignalWindow>
+</Item>
+<Item id="ITEM2" type="variable" name="IS_LAST_NODE" parentId="ITEM1" scope="none" variableTypeName="BOOLEAN" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB3"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="MAX_ROUTES" parentId="ITEM1" scope="none" variableTypeName="INTEGER" isSynonym="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="type" name="PID_TAB" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM5" type="type" name="ROUTE_TAB" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM6" type="type" name="ROUTE_INFO" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM7" type="process" name="pDrogiKomunikacjiWP" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK44" isFrom="FALSE"/>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW2" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK45" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</SentSignals>
+</SignalWindow>
+</Item>
+<Item id="ITEM8" type="process" name="pMechanizmBadaniaTopologii" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB12"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB12"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW4" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK45" isFrom="FALSE"/>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW3" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK40" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG5"/>
+</SentSignals>
+</SignalWindow>
+</Item>
+<Item id="ITEM9" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="0" maxInstances="MAX_ROUTES">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB13"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB13"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW5" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK28" isFrom="TRUE"/>
+<SentSignalLists>
+<SignalListReference id="LIST1"/>
+</SentSignalLists>
+</SignalWindow>
+<SignalWindow id="SIGWDW6" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK37" isFrom="FALSE"/>
+<ReceivedSignalLists>
+<SignalListReference id="LIST1"/>
+</ReceivedSignalLists>
+</SignalWindow>
+<SignalWindow id="SIGWDW7" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK40" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG5"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW8" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK44" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+</SentSignals>
+</SignalWindow>
+</Item>
+</DictionaryObjects>

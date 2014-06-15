@@ -3,10 +3,12 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sMultipleRoutes">
-<SendSymbols>
-<SymbolReference symbolId="SYMB54"/>
-</SendSymbols>
+<Signal id="SIG1" name="sAddRoute">
+<InputSymbols>
+<SymbolReference symbolId="SYMB44"/>
+<SymbolReference symbolId="SYMB36"/>
+<SymbolReference symbolId="SYMB41"/>
+</InputSymbols>
 </Signal>
 <Signal id="SIG2" name="sRemoveRoute">
 <InputSymbols>
@@ -14,46 +16,44 @@
 <SymbolReference symbolId="SYMB48"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG3" name="sAddRoute">
-<InputSymbols>
-<SymbolReference symbolId="SYMB44"/>
-<SymbolReference symbolId="SYMB36"/>
-<SymbolReference symbolId="SYMB41"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG4" name="sNoRoute">
+<Signal id="SIG3" name="sNoRoute">
 <SendSymbols>
 <SymbolReference symbolId="SYMB53"/>
 </SendSymbols>
 </Signal>
-<Item id="ITEM1" type="process" name="pDrogiKomunikacjiWP" scope="current">
+<Signal id="SIG4" name="sMultipleRoutes">
+<SendSymbols>
+<SymbolReference symbolId="SYMB54"/>
+</SendSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="pLastDrogiKomunikacjiWP" scope="current">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG1"/>
+<SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
 </SentSignals>
 <ReceivedSignals>
+<SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
-<SignalReference id="SIG3"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB44"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB48"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB31"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB36"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -72,25 +72,25 @@
 <SymbolReference symbolId="SYMB45"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM3" type="state" name="OneRoute" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB35"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB35"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM4" type="state" name="MultipleRoutes" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB30"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB30"/>
-</UsingSymbols>
-</Item>
-<Item id="ITEM5" type="variable" name="routes" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM3" type="variable" name="routes" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB55"/>
 </DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="OneRoute" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB35"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB35"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="state" name="MultipleRoutes" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB30"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB30"/>
+</UsingSymbols>
 </Item>
 </DictionaryObjects>
