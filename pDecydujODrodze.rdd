@@ -71,7 +71,7 @@ route := route_tab(found_i);</Text>
 <Text>pPojedynczaDrogaDowolnegoWezlaWP</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB25" type="sdlSendSig" xCenter="121" yCenter="693" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB25" type="sdlSendSig" xCenter="121" yCenter="682" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sRouteAdded TO route!route_pid</Text>
 </Symbol>
@@ -93,7 +93,8 @@ route := route_tab(found_i);</Text>
 route!wb_pid := SENDER,
 route!route_pid := OFFSPRING,
 route!cost := 1,
-route!route := route!route // mkstring(OFFSPRING);</Text>
+route!route := route!route // mkstring(SELF),
+route_tab := route_tab // mkstring(route)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB29" type="sdlState" xCenter="792" yCenter="275" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
@@ -146,7 +147,7 @@ route!route := route!route // mkstring(OFFSPRING);</Text>
 
 </Link>
 
-<Link linkId="LINK214" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK248" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB18" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -156,7 +157,7 @@ route!route := route!route // mkstring(OFFSPRING);</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="88"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 
@@ -232,7 +233,7 @@ route!route := route!route // mkstring(OFFSPRING);</Text>
 
 </Link>
 
-<Link linkId="LINK215" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK247" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB25" type="void" isOutside="TRUE" side="x" position="-0.1" endType="voidend">
 <Text id="1"></Text>
@@ -242,7 +243,7 @@ route!route := route!route // mkstring(OFFSPRING);</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="176"/>
+<LinkSegment orientation="v" length="187"/>
 <LinkSegment orientation="h" length="154"/>
 <LinkSegment orientation="v" length="55"/>
 

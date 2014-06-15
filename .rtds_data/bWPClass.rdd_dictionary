@@ -33,9 +33,9 @@
 <SignalList id="LIST2" name="slRouteChangedExternal">
 <SignalReference id="SIG9"/>
 <SignalReference id="SIG10"/>
-<SignalReference id="SIG8"/>
 <SignalReference id="SIG7"/>
 <SignalReference id="SIG6"/>
+<SignalReference id="SIG8"/>
 <DeclarationSymbols>
 </DeclarationSymbols>
 </SignalList>
@@ -155,7 +155,7 @@
 </ReceivedSignalLists>
 </SignalWindow>
 </Item>
-<Item id="ITEM9" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="0" maxInstances="100">
+<Item id="ITEM9" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" parentId="ITEM1" scope="none" minInstances="0" maxInstances="MAX_ROUTES">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB9"/>
 </DefiningSymbols>

@@ -62,9 +62,9 @@ ENDNEWTYPE;</Text>
 <Text>pDecydujODrodze</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlPrcs" xCenter="429" yCenter="495" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlPrcs" xCenter="429" yCenter="495" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>pPojedynczaDrogaDowolnegoWezlaWP (0, 100)</Text>
+<Text>pPojedynczaDrogaDowolnegoWezlaWP (0, MAX_ROUTES)</Text>
 </Symbol>
 </Symbol>
 

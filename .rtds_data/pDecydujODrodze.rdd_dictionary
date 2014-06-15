@@ -3,14 +3,14 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sExternalCommunication">
-<InputSymbols>
-<SymbolReference symbolId="SYMB21"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG2" name="sExternalCommunicationError">
+<Signal id="SIG1" name="sExternalCommunicationError">
 <InputSymbols>
 <SymbolReference symbolId="SYMB27"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="sExternalCommunication">
+<InputSymbols>
+<SymbolReference symbolId="SYMB21"/>
 </InputSymbols>
 </Signal>
 <Signal id="SIG3" name="sRouteAdded">
@@ -42,10 +42,10 @@
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM10" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" scope="block">
-<UsingSymbols>
-<SymbolReference symbolId="SYMB23"/>
-</UsingSymbols>
+<Item id="ITEM10" type="variable" name="len" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB11"/>
+</DefiningSymbols>
 </Item>
 <Item id="ITEM11" type="state" name="Idle" parentId="ITEM1" scope="none">
 <DefiningSymbols>
@@ -57,42 +57,42 @@
 <SymbolReference symbolId="SYMB26"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM2" type="variable" name="i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM2" type="process" name="pPojedynczaDrogaDowolnegoWezlaWP" scope="block">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB23"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM3" type="variable" name="route_tab" parentId="ITEM1" scope="none" variableTypeName="ROUTE_TAB">
+<Item id="ITEM4" type="variable" name="wb_tab" parentId="ITEM1" scope="none" variableTypeName="PID_TAB">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM4" type="variable" name="found_i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM5" type="variable" name="route_tab" parentId="ITEM1" scope="none" variableTypeName="ROUTE_TAB">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="variable" name="len" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
+<Item id="ITEM6" type="variable" name="found_pid" parentId="ITEM1" scope="none" variableTypeName="PID">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM6" type="variable" name="route" parentId="ITEM1" scope="none" variableTypeName="ROUTE_INFO">
+<Item id="ITEM7" type="variable" name="route" parentId="ITEM1" scope="none" variableTypeName="ROUTE_INFO">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM7" type="variable" name="found_prev_route" parentId="ITEM1" scope="none" variableTypeName="BOOLEAN">
+<Item id="ITEM8" type="variable" name="found_prev_route" parentId="ITEM1" scope="none" variableTypeName="BOOLEAN">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM8" type="variable" name="found_pid" parentId="ITEM1" scope="none" variableTypeName="PID">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB11"/>
-</DefiningSymbols>
-</Item>
-<Item id="ITEM9" type="variable" name="wb_tab" parentId="ITEM1" scope="none" variableTypeName="PID_TAB">
+<Item id="ITEM9" type="variable" name="found_i" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB11"/>
 </DefiningSymbols>
