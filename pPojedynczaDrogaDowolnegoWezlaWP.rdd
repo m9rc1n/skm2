@@ -133,7 +133,7 @@
 TIMER spontanic;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB49" type="sdlStart" xCenter="902" yCenter="253" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB49" type="sdlStart" xCenter="473" yCenter="253" fixedDimensions="TRUE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 </Symbol>
@@ -143,24 +143,9 @@ TIMER spontanic;</Text>
 <Text>MultiplePaths</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB50" type="sdlInitTimer" xCenter="759" yCenter="253" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>SET(NOW, spontanic)</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB51" type="sdlInputSig" xCenter="495" yCenter="253" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>spontanic</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB52" type="sdlSendSig" xCenter="495" yCenter="319" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB52" type="sdlSendSig" xCenter="473" yCenter="319" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sAddRoute</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB53" type="sdlState" xCenter="616" yCenter="253" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>NoPath</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB6" type="sdlInputSig" xCenter="99" yCenter="407" fixedDimensions="TRUE" width="154" height="44" color="#000000" fillColor="#ffffff">
@@ -591,17 +576,17 @@ TIMER spontanic;</Text>
 
 </Link>
 
-<Link linkId="LINK467" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK486" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB49" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
+<Connector attachedSymbolId="SYMB49" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB50" type="sdlarrow" isOutside="TRUE" side="y" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB52" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="-143"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
@@ -667,35 +652,7 @@ TIMER spontanic;</Text>
 
 </Link>
 
-<Link linkId="LINK468" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB50" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB53" type="sdlarrow" isOutside="TRUE" side="y" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="h" length="-143"/>
-
-</Link>
-
-<Link linkId="LINK470" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB51" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB52" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="66"/>
-
-</Link>
-
-<Link linkId="LINK471" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK479" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB52" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -706,22 +663,8 @@ TIMER spontanic;</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="44"/>
-<LinkSegment orientation="h" length="-132"/>
+<LinkSegment orientation="h" length="-110"/>
 <LinkSegment orientation="v" length="44"/>
-
-</Link>
-
-<Link linkId="LINK469" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB53" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB51" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="h" length="-121"/>
 
 </Link>
 
